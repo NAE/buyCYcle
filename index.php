@@ -68,6 +68,25 @@ $qry = null;
 <link rel="stylesheet" type="text/css" href="./css/main.css">
 </head>
 		<form id="bikeCheck" action="php/process.php" method="post">
+		<script type="text/javascript">
+		$.post("./php/map/getracks.php", {}, function(data){
+			data = $.parseJSON(data);
+			for(var racks in data) {
+		});
+		
+		/*
+		
+			for(var rack in data){
+			var rackData = data[rack];
+			var lat = rackData.lat;
+			var lon = rackData.lon;
+			var marker = new google.maps.Marker({
+				position: new google.maps.LatLng(lat, lon),
+				map: map,
+				icon: "../img/bikerack.png"
+			});
+		*/
+		</script>
 			<table id="rackTable">
 			<tr> <td>Station ID: </td>
 				<td>
