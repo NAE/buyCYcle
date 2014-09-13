@@ -103,7 +103,7 @@ window.onload = loadScript;
 		</div>
 		<div class="modal-body">
 			<button type="button" class="btn btn-success" id="confirmrentbutton">Confirm Rent</button>
-			<h5 id="takemessage"><span class="label label-danger">Please take your bike from stall #<span id="stalllabel"></span></span></h5>
+			<h5 id="takemessage"><span id="labelnotice" class="label label-danger">Please take your bike from stall #<span id="stalllabel"></span></span></h5>
 		</div>
     </div>
   </div>
@@ -111,13 +111,33 @@ window.onload = loadScript;
 
 <script type="text/javascript">
 
+var stall;
+
 $("#confirmrentbutton").click(function(){
 	$.post("process.php", {station_ID: $(".rentbutton").attr("data-rack"), action: "Rent"}, function(data){
-		var stall = $(data).next("#selectedstall").first().html();
+		stall = $(data).next("#selectedstall").first().html();
 		$("#stalllabel").html(stall);
 		$("#takemessage").show();
 	});
 });
+
+function checkLoop() {
+	checkForTaken();
+	global = setTimeout("checkLoop()", 500);
+}
+
+function checkForTaken() {
+	$.post("./rentwait.php",{currentRack : $(".rentbutton").attr("data-rack"), currentSlot : stall}, function(data){
+		if (data) {
+			$("#labelnotice").removeClass("label-danger").addClass("label-success").html("Bike taken, thank you!");
+			clearTimeout(global);
+			$.post("./rentlock.php",{currentRack : $(".rentbutton").attr("data-rack"), currentSlot : stall}, function(info) {
+			});
+		}
+	});
+}
+
+checkLoop();
 
 </script>
 
