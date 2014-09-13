@@ -67,6 +67,11 @@ $qry = null;
 </head>
 		<form id="bikeCheck" action="php/process.php" method="post">
 		<script type="text/javascript">
+		function getCurrSelect(selection) {
+			var currSelect = selection.value;
+			alert(currSelect);
+		}
+		
 		$.post("./php/map/getracks.php", {}, function(data){
 			data = $.parseJSON(data);
 			for(var rack in data) {
@@ -92,7 +97,7 @@ $qry = null;
 			<table id="rackTable">
 			<tr> <td>Station ID: </td>
 				<td>
-				<select name="station_ID" size="1">
+				<select name="station_ID" size="1" onchange="getCurrSelect(this)">
 					<?php foreach($allRacks as $pkey => $racks) { 
 					
 					/* if ($allRacks[i] == $urlSelectedRack ) {
@@ -108,6 +113,12 @@ $qry = null;
 					
 				</select>
 				</td>
+			</tr>
+			<tr>
+				<td>Bikes available:</td> <td id="bikesAvail"></td>
+			</tr>
+						<tr>
+				<td>Open slots:</td> <td id="openSlots"></td>
 			</tr>
 			<tr>			
 				<td colspan="2"><input type="submit" class="submitClass" name="action" value="Rent"></td>
