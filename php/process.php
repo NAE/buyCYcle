@@ -1,7 +1,8 @@
 <?php
 
 	require_once('php/db_connect.php');
-	
+		echo "TESTING";
+		
 	if (isset($_GET['action'])) {
 		$action = strtolower($_GET['action']);
 		
@@ -30,7 +31,7 @@
 	}
 	
 	echo $action;
-	echo "TESTING";
+
 	include($action.'.php');
 	
 
