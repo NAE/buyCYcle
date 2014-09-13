@@ -6,7 +6,7 @@ Open of DB connection
 
 //$db=mysql_connect("localhost", "root", "ageoldjim") or die(mysql_error());
 
-$dsn = 'mysql:host=buy-cycle.me;dbname=BuyCycle';
+$dsn = 'mysql:host=localhost;dbname=BuyCycle';
 $un = 'root';
 $pw = 'ageoldjim';
 
