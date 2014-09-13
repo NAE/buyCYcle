@@ -63,6 +63,7 @@ function initialize() {
 		}
 		
 	});
+	putSelfOnMap();
 }
 
 function loadScript() {
@@ -70,6 +71,18 @@ function loadScript() {
   script.type = 'text/javascript';
   script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDSOJYPD3A5dLp_jY5P6SgeP58RJpiNRfs&callback=initialize';
   document.body.appendChild(script);
+}
+
+function putSelfOnMap(){
+	if (navigator.geolocation){
+		return navigator.geolocation.getCurrentPosition(function(position){
+			var meMarker = new google.maps.Marker({
+				position: new google.maps.LatLng(position.coords.latitude, position.coords.longitude),
+				map: map,
+				icon : "../img/me.png",
+			});
+		});
+	}
 }
 
 window.onload = loadScript;
