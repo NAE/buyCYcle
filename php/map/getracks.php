@@ -11,10 +11,11 @@ $sth = $db->prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
 $sth->execute();
 $racks = $sth->fetchAll();
 
-foreach($rack in $racks){
+foreach($rack as $racks){
 	$sth2 = $db->prepare($sql2, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
 	$sth2->execute();
 	$slots = $sth2->fetchAll();
+	echo $rack;
 }
 
 echo json_encode($racks);
