@@ -64,6 +64,25 @@ $qry = null;
 <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <link rel="stylesheet" type="text/css" href="./css/main.css">
+
+<script type="text/javascript">
+		
+					$(document).ready(
+						function() {
+							$.post("./php/map/getracks.php", {}, function(data){
+								data = $.parseJSON(data);
+								for(var rack in data) {
+									var rackData = data[rack];
+									console.log(data);
+									if ($('#stationSelect').val() == rackData['rackid']) {
+										$('#bikesAvail').html(rackData['numbikes']);
+										$('#openSlots').html(rackData['emptyslots']);
+									}
+								}
+							});
+						}
+					);
+				</script>
 </head>
 		<form id="bikeCheck" action="php/process.php" method="post">
 
