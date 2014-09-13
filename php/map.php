@@ -21,13 +21,15 @@ function initialize() {
 
   map = new google.maps.Map(document.getElementById('map-canvas'),
       mapOptions);
-      
-  if (navigator.geolocation) {
-     navigator.geolocation.getCurrentPosition(function (position) {
-	 initialLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-	 map.setCenter(initialLocation);
- });
- }
+  
+  setTimeout(function(){
+		if (navigator.geolocation) {
+			navigator.geolocation.getCurrentPosition(function (position) {
+				initialLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+				map.setCenter(initialLocation);
+			});
+		}
+	}, 300);
 }
 
 function loadScript() {
