@@ -1,6 +1,6 @@
 <?php
 
-chdir("/var/www/Bike");
-echo exec("git pull");
+echo chdir("/var/www/Bike");
+echo shell_exec("git pull");
 
 ?>
