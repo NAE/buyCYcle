@@ -68,7 +68,7 @@ $qry = null;
 						}
 					else { */
 						$selectOption = "";
-						$currentRack = $allRacks[$pkey]['rackid']
+						$currentRack = $allRacks[$pkey]['rackid'];
 						?>
 						<option value="<?php echo $currentRack ?>"><?php echo $currentRack ?></option>
 						
