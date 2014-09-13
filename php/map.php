@@ -44,7 +44,7 @@ function initialize() {
 			var marker = new google.maps.Marker({
 				position: new google.maps.LatLng(lat, lon),
 				map: map,
-				icon: "http://www.bicycle-storage-ideas.com/wp-content/uploads/city-bike-rack-40x40.jpg"
+				icon: "../img/bikerack.png"
 			});
 		}
 		
