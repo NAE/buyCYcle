@@ -72,6 +72,10 @@ $qry = null;
 		$.post("./php/map/getracks.php", {}, function(data){
 			data = $.parseJSON(data);
 			for(var racks in data) {
+				var rackData = data[rack];
+				
+			
+			}
 		});
 		
 		/*
