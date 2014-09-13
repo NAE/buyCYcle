@@ -54,11 +54,11 @@ $qry->execute();
 $allRacks = $qry->fetchAll(PDO::FETCH_BOTH);
 $qry = null;
 
-echo json_encode($allRacks);
+echo "Test data:".json_encode($allRacks);
 
 ?>
 <html>
-		<form id="bikeCheck" action="php/process.php" method="get">
+		<form id="bikeCheck" action="php/process.php" method="post">
 			<table>
 			<tr> <td>Station ID: </td>
 				<td>

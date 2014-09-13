@@ -12,16 +12,16 @@
 		}
 		
 	if (isset($_GET['station_ID'])) {
-		$currentRack = $_POST['station_ID'];
+		$currentSlot = $_POST['station_ID'];
 		
 	}
 	elseif (isset($_POST['station_ID'])) {
-		$currentRack = $_GET['station_ID'];
+		$currentSlot = $_GET['station_ID'];
 		
 		}
 		
 	else {
-		$currentRack = '';
+		$currentSlot = '';
 	}
 	include($action'.php');
 	
