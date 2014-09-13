@@ -94,6 +94,7 @@ $qry = null;
 								data = $.parseJSON(data);
 								for(var rack in data) {
 									var rackData = data[rack];
+									console.log(data);
 									$('#bikesAvail').html(rackData['numbikes']);
 									$('#openSlots').html(rackData['emptyslots']);
 								}
