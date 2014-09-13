@@ -20,7 +20,7 @@
 			</tr>
 		
 		<?php
-			$qry = $db->prepare("SELECT * FROM Slots");
+			$qry = $db->prepare("SELECT * FROM Slots WHERE rackid='12B'");
 			$qry->execute();
 			$all = $qry->fetchAll(PDO::FETCH_BOTH);
 			$qry = null;
