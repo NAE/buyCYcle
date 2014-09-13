@@ -23,7 +23,7 @@
 	else {
 		$currentRack = '';
 	}
-	include($action'.php');
+	include($action.'.php');
 	
 
 ?>
