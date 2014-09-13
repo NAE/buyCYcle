@@ -15,7 +15,6 @@ foreach($rack in $racks){
 	$sth2 = $db->prepare($sql2, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
 	$sth2->execute();
 	$slots = $sth2->fetchAll();
-	$rack['odata'] = count($slots);
 }
 
 echo json_encode($racks);
