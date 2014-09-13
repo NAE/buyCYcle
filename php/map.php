@@ -6,7 +6,7 @@
 var racks = [];
 
 $.post("map/getracks.php", function(data){
-	console.log(data);
+	
 });
 
 </script>
