@@ -95,8 +95,10 @@ $qry = null;
 								for(var rack in data) {
 									var rackData = data[rack];
 									console.log(data);
-									$('#bikesAvail').html(rackData['numbikes']);
-									$('#openSlots').html(rackData['emptyslots']);
+									if ($('#stationSelect').val() == rackData['rackid']) {
+										$('#bikesAvail').html(rackData['numbikes']);
+										$('#openSlots').html(rackData['emptyslots']);
+									}
 								}
 							});
 						}
@@ -107,7 +109,7 @@ $qry = null;
 			<tr>
 				<td>Bikes available:</td> <td id="bikesAvail"></td>
 			</tr>
-						<tr>
+			<tr>
 				<td>Open slots:</td> <td id="openSlots"></td>
 			</tr>
 			<tr>			
