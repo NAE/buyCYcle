@@ -118,8 +118,8 @@ $("#confirmrentbutton").click(function(){
 	$.post("process.php", {station_ID: $(".rentbutton").attr("data-rack"), action: "Rent"}, function(data){
 		stall = $(data).next("#selectedstall").first().html();
 		$("#stalllabel").html(stall);
-		$("#confirmrentbutton").slideUp();
-		$("#takemessage").slideDown();
+		$("#confirmrentbutton").slideUp(200);
+		$("#takemessage").slideDown(200);
 	});
 });
 
