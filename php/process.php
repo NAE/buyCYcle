@@ -7,7 +7,8 @@
 		
 	}
 	elseif (isset($_POST['action'])) {
-		$action = strtolower($_POST['action']);
+		$action = $_POST['action'];
+		//$action = strtolower($_POST['action']);
 		
 		}
 	else {
