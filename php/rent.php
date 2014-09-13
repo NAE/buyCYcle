@@ -7,7 +7,7 @@
 	$qry = null;
 	
 	if($currentSlot) {
-		echo "<br />Please take your bike from stall #".$currentSlot[0].".";
+		echo "<br />Please take your bike from stall #<span id='selectedstall'>".$currentSlot[0]."</span>.";
 		include('./rentunlock.php');
 		
 	}
