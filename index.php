@@ -50,6 +50,7 @@ $qry = null;
 				
 					<?php foreach($allRacks as $pkey => $racks) {  
 					$currentRack = $allRacks[$pkey]['rackid'];
+					echo $currentRack;
 					if($urlSelectRack) {
 						if ($currentRack == $urlSelectRack ) {
 							$selectOption = "selected='" + $currentRack + "' ";
