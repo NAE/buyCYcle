@@ -1,5 +1,5 @@
 <?php
 
-echo shell_exec("sudo git pull");
+echo system("git pull");
 
 ?>
