@@ -1,18 +1,18 @@
 <?php
 
-/**
-	Require_Once(DB SELECT PHP);
-				
-		If not logged in
-			Include log in prompt
-			
-		If renting
-			include rent.php
-			
-		If returning
-			include return.php
-			
-*/
+	require_once('php/db_connect.php');
+	
+	if (isset($_GET['action'])) {
+		$action = strtolower($_POST['action']);
+		
+	}
+	elseif (isset($_POST['action'])) {
+		$action = strtolower($_GET['action']);
+		
+		}
+		
+		
+	include($action'.php');
+	
 
- $
 ?>

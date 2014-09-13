@@ -78,10 +78,10 @@ $qry = null;
 				</td>
 			</tr>
 			<tr>			
-				<td colspan="2"><input type="submit" class="submitClass" name="rent" value="Rent"></td>
+				<td colspan="2"><input type="submit" class="submitClass" name="action" value="Rent"></td>
 			</tr>
 			<tr>
-				<td colspan="2"><input type="submit" class="submitClass" name="return" value="Return"></td>
+				<td colspan="2"><input type="submit" class="submitClass" name="action" value="Return"></td>
 			</tr>
 		</form>
 </html>

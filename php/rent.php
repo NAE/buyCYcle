@@ -1,5 +1,20 @@
 <?php
-
+	require_once('php/db_connect.php');
+	
+	$qry = $db->prepare("SELECT slot FROM slots WHERE rackid=".$currentRack." AND hasbike=1 LIMIT 1;");
+	$qry->execute();
+	$currentSlot = $qry->fetch(PDO::FETCH_BOTH);
+	$qry = null;
+	
+	if($currentSlot) {
+		echo "Please take your bike from stall #".$currentSlot.".";
+		
+	}
+	
+	else {
+		echo "There are no bikes available.";
+	}
+	
 /**
 
 Require_Once(DB SELECT PHP);
@@ -28,5 +43,10 @@ Require_Once(DB SELECT PHP);
 				Sorry, you're already renting
 				
 */
+
+echo "Rent works";
+
+
+
 
 ?>
