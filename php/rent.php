@@ -12,6 +12,9 @@
 		
 		$ready = "no";
 		
+		$.post("./rentwait.php",{currentRack : $currentRack, currentSlot : $currentSlot[0]}, function(data){
+		});
+		
 		include('./rentwait.php');
 
 		echo "Thank you";

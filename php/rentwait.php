@@ -1,8 +1,11 @@
 <?php
+		$currentSlot = $_POST['currentSlot'];
+		$currentRack = $_POST['currentRack'];
+		
 		while ($ready == "no") {
 
 			if(!$isTaken) {
-				$takenQRY = $db->prepare("SELECT slotnum FROM Slots WHERE slotnum='".$currentSlot[0]."' AND hasbike=0 LIMIT 1;");
+				$takenQRY = $db->prepare("SELECT slotnum FROM Slots WHERE rackid='".$currentRack."' AND slotnum='".$currentSlot."' AND hasbike=0 LIMIT 1;");
 				$takenQRY->execute();
 				
 				$isTaken = $takenQRY->fetch(PDO::FETCH_BOTH);
