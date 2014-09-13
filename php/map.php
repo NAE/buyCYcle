@@ -23,6 +23,10 @@ function initialize() {
 	};
 
 	map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+	
+	var infowindow = new google.maps.InfoWindow({
+		maxWidth: 200
+	});
 
 	setTimeout(function(){
 		if (navigator.geolocation) {
@@ -46,6 +50,12 @@ function initialize() {
 				position: new google.maps.LatLng(lat, lon),
 				map: map,
 				icon: "../img/bikerack.png"
+			});
+			
+			google.maps.event.addListener(marker, 'mouseover', function() {
+				//close the map menu if they clicked on the map
+				infowindow.setContent("test");
+				infowindow.open(map, marker);
 			});
 		}
 		
