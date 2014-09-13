@@ -10,7 +10,8 @@
 
 <body>
 	<center>
-		<table style='margin-top: 120px;'>
+		<div style='margin-top: 120px;'></div>
+		<table>
 			<tr>
 				<?php
 				for($i = 1; $i <= 10; $i++) {
