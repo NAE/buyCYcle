@@ -11,7 +11,18 @@
 		
 		}
 		
+	if (isset($_GET['station_ID'])) {
+		$currentRack = $_POST['station_ID'];
 		
+	}
+	elseif (isset($_POST['station_ID'])) {
+		$currentRack = $_GET['station_ID'];
+		
+		}
+		
+	else {
+		
+	}
 	include($action'.php');
 	
 
