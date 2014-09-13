@@ -18,22 +18,23 @@
 				}
 				?>
 			</tr>
-		
-		<?php
-			$qry = $db->prepare("SELECT * FROM Slots WHERE rackid='12B'");
-			$qry->execute();
-			$all = $qry->fetchAll(PDO::FETCH_BOTH);
-			$qry = null;
-			foreach($all as $pkey) {
-				$cur = $pkey['hasbike'];
-				if($cur == 1) {
-					echo "<td><img src='../Graphics/greenBike.png'></td>";
-				}
-				else {
-					echo "<td><img src='../Graphics/redBike.png'></td>";
-				}
-			}
-		?>
+				<?php
+					$qry = $db->prepare("SELECT * FROM Slots WHERE rackid='12B'");
+					$qry->execute();
+					$all = $qry->fetchAll(PDO::FETCH_BOTH);
+					$qry = null;
+			echo "<tr>";
+					foreach($all as $pkey) {
+						$cur = $pkey['hasbike'];
+						if($cur == 1) {
+							echo "<td><img src='../Graphics/greenBike.png'></td>";
+						}
+						else {
+							echo "<td><img src='../Graphics/redBike.png'></td>";
+						}
+					}
+				?>
+			</tr>
 		</table>
 	</center>
 </body>
