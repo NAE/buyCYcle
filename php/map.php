@@ -112,7 +112,8 @@ window.onload = loadScript;
 $("#confirmrentbutton").click(function(){
 	console.log($(".rentbutton").attr("data-rack"));
 	$.post("process.php", {station_ID: $(".rentbutton").attr("data-rack"), action: "Rent"}, function(data){
-		console.log(data);
+		var stall = $(data).find("#selectedstall").html();
+		console.log(stall);
 	});
 });
 
