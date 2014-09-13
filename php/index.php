@@ -47,5 +47,38 @@
 			
 */
 
+$qry = $db->prepare("SELECT rackid from BuyCycle.Racks ORDER BY rackid ASC");
+$qry->execute();
+$allRacks = $qry->fetch(PDO::FETCH_BOTH);
+$qry = null;
 
 ?>
+
+		<form id="bikeCheck" action="form.php" method="get">
+			<table>
+			<tr> <td>Station ID: </td>
+				<td>
+				<select name="station_ID" size="1">
+					<?php foreach($allRacks as $pkey => $racks) { 
+					
+					/* if ($allRacks[i] == $urlSelectedRack ) {
+						$selectOption = "selected='" + $allRacks[i] + "' ";
+						}
+					else { */
+						$selectOption = "";
+						$currentRack = $allRacks[$pkey]['rackid']
+						?>
+						<option value="<?php echo $currentRack ?>"><?php echo $currentRack ?></option>
+						
+					<?php } ?>
+					
+				</select>
+				</td>
+			</tr>
+			<tr>			
+				<td colspan="2"><input type="submit" class="submitClass" name="rent" value="Rent"></td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="submit" class="submitClass" name="return" value="Return"></td>
+			</tr>
+		</form>
