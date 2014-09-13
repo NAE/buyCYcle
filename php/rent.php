@@ -62,6 +62,7 @@ echo "<br />Rent works";
 
 	function initialize() {
 		$.post("./rentwait.php",{currentRack : "<?php echo $currentRack ?>", currentSlot : "<?php echo $currentSlot[0] ?>"}, function(data){
+			console.log(data);
 		});
 	}
 
