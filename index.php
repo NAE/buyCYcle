@@ -1,6 +1,6 @@
 <?php
 
-	require_once('db_connect.php');
+	require_once('php/db_connect.php');
 /**
 		
 		
@@ -55,8 +55,8 @@ $allRacks = $qry->fetch(PDO::FETCH_BOTH);
 $qry = null;
 
 ?>
-
-		<form id="bikeCheck" action="php/form.php" method="get">
+<html>
+		<form id="bikeCheck" action="php/process.php" method="get">
 			<table>
 			<tr> <td>Station ID: </td>
 				<td>
@@ -84,3 +84,4 @@ $qry = null;
 				<td colspan="2"><input type="submit" class="submitClass" name="return" value="Return"></td>
 			</tr>
 		</form>
+</html>
