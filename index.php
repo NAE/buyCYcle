@@ -54,7 +54,7 @@ $qry->execute();
 $allRacks = $qry->fetchAll(PDO::FETCH_BOTH);
 $qry = null;
 
-echo "Test data:".json_encode($allRacks);
+
 
 ?>
 <html>
@@ -63,7 +63,7 @@ echo "Test data:".json_encode($allRacks);
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-
+<link rel="stylesheet" type="text/css" href="./css/main.css">
 </head>
 		<form id="bikeCheck" action="php/process.php" method="post">
 			<table>
