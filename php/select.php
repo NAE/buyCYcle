@@ -1,3 +1,8 @@
+<?php
+	//If logged in, generate page
+		//include select.html
+?>
+
 <html>
 
 	<head>
@@ -6,7 +11,7 @@
 	
 	<body>
 	
-		<form id="bikeCheck" action="../php/form.php" method="get">
+		<form id="bikeCheck" action="form.php" method="get">
 			<table>
 			<tr> <td>Station ID: </td>
 				<td>
@@ -28,3 +33,7 @@
 	
 	
 </html>
+
+<?php
+	//endif logged in
+?>
