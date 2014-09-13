@@ -10,6 +10,9 @@
 		$action = strtolower($_POST['action']);
 		
 		}
+	else {
+		$action = "blank";
+	}
 		
 	if (isset($_GET['station_ID'])) {
 		$currentRack = $_GET['station_ID'];
