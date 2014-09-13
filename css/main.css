@@ -1,0 +1,12 @@
+body {
+	background-color: LightGoldenRodYellow;
+}
+
+.submitClass {
+	border: 0 none;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	width: 200px;
+	height: 100px;
+	
+}
