@@ -54,7 +54,8 @@ function initialize() {
 					$(".rentbutton").click(function(){
 						var rackId = $(this).attr("data-rack");
 						$("#stall").html(rackId);
-						$("#takemessage").hide();
+						$("#takemessage").slideUp();
+						$("#confirmrentbutton").slideDown();
 					});
 				}
 			})(marker, rackData, lat, lon));
@@ -117,7 +118,8 @@ $("#confirmrentbutton").click(function(){
 	$.post("process.php", {station_ID: $(".rentbutton").attr("data-rack"), action: "Rent"}, function(data){
 		stall = $(data).next("#selectedstall").first().html();
 		$("#stalllabel").html(stall);
-		$("#takemessage").show();
+		$("#confirmrentbutton").slideUp();
+		$("#takemessage").slideDown();
 	});
 });
 
