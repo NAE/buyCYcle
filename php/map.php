@@ -54,7 +54,6 @@ function initialize() {
 					$(".rentbutton").click(function(){
 						var rackId = $(this).attr("data-rack");
 						$("#stall").html(rackId);
-						
 					});
 				}
 			})(marker, rackData, lat, lon));
@@ -88,7 +87,9 @@ function putSelfOnMap(){
 window.onload = loadScript;
 
 $("#confirmrentbutton").click(function(){
-	
+	$.post("process.php", {station_ID: $(".rentbutton").attr("data-rack"), action: "Rent"}, function(data){
+		console.log(data);
+	});
 });
 
 </script>
