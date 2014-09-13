@@ -52,8 +52,9 @@ function initialize() {
 				icon: "../img/bikerack.png"
 			});
 			
-			google.maps.event.addListener(marker, 'mouseover', function() {
+			google.maps.event.addListener(marker, 'click', function() {
 				//close the map menu if they clicked on the map
+				infowindow.close();
 				infowindow.setContent("test");
 				infowindow.open(map, marker);
 			});
