@@ -98,7 +98,7 @@ window.onload = loadScript;
   <div class="modal-dialog modal-sm">
     <div class="modal-content">
 		<div class="modal-header">
-			Rack: <span id="stall"></span>
+			<h4 class="modal-title">Rack: <span id="stall"></span></h4>
 		</div>
     </div>
   </div>
