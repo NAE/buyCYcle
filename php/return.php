@@ -1,5 +1,5 @@
 <?php
-/*
+/**
 		Require_Once(DB SELECT PHP);
 		If not logged in
 			Include log in prompt

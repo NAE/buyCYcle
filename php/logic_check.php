@@ -1,6 +1,6 @@
 <?php
 
-/*
+/**
 Check to make sure user is logged in, function
 
 If yes, return yes

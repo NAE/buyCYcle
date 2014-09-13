@@ -1,6 +1,6 @@
 <?php
 
-/*
+/**
 	Require_Once(DB SELECT PHP);
 				
 		If not logged in
@@ -14,4 +14,5 @@
 			
 */
 
+ $
 ?>
