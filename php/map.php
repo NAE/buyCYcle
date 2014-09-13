@@ -1,13 +1,15 @@
-<?php
+<html>
+<head>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript">
 
-include 'db_connect.php';
+var racks = [];
 
-$sql = "SELECT * FROM Racks";
+$.post("map/getracks.php", function(data){
+	console.log(data);
+});
 
-$sth = $db->prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
-$sth->execute();
-$testOutput = $sth->fetchAll();
-print_r($testOutput);
+</script>
 
-?>
-
+</head>
+</html>
