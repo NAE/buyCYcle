@@ -55,7 +55,6 @@ function initialize() {
 			google.maps.event.addListener(marker, 'click', (function(marker) {
 				return function(){
 					//close the map menu if they clicked on the map
-					infowindow.close();
 					infowindow.setContent("test");
 					infowindow.open(map, marker);
 				}
