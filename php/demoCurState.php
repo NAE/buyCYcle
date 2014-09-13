@@ -13,13 +13,12 @@
 		<table>
 			<tr>
 				<?php
-				for($i = 1; $i <= 12; $i++) {
+				for($i = 1; $i <= 10; $i++) {
 					echo "<td class='numbers'>".$i."</td>";
 				}
 				?>
 			</tr>
-		</table>
-	</center>
+		
 		<?php
 			$qry = $db->prepare("SELECT * FROM BuyCycle.Slots WHERE rackid = '12B' ORDER BY slotnum ASC");
 			$qry->execute();
@@ -27,10 +26,12 @@
 			$qry = null;
 
 			foreach($all as $pkey) {
-				$cur = "";
-
+				$cur = $all[$pkey]['hasbike'];
+				echo $cur;
 			}
 		?>
+		</table>
+	</center>
 </body>
 
 </html>
