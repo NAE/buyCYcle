@@ -102,6 +102,7 @@ window.onload = loadScript;
 		</div>
 		<div class="modal-body">
 			<button type="button" class="btn btn-success" id="confirmrentbutton">Confirm Rent</button>
+			<h5 id="takemessage" class="hidden">Please take your bike from stall #<span id="stalllabel" class="label label-info"></span></h5>
 		</div>
     </div>
   </div>
@@ -110,10 +111,10 @@ window.onload = loadScript;
 <script type="text/javascript">
 
 $("#confirmrentbutton").click(function(){
-	console.log($(".rentbutton").attr("data-rack"));
 	$.post("process.php", {station_ID: $(".rentbutton").attr("data-rack"), action: "Rent"}, function(data){
 		var stall = $(data).next("#selectedstall").first().html();
-		console.log(stall);
+		$("#stalllabel").html(stall);
+		$("#takemessage").show();
 	});
 });
 
