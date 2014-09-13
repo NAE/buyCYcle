@@ -8,11 +8,13 @@
 	}
 	elseif (isset($_POST['action'])) {
 		$action = $_POST['action'];
+		
 		//$action = strtolower($_POST['action']);
 		
-		}
+	}
+	
 	else {
-		$action = "blank";
+		$action = 'blank';
 	}
 		
 	if (isset($_GET['station_ID'])) {
@@ -23,7 +25,6 @@
 		$currentRack = $_POST['station_ID'];
 		
 		}
-		
 	else {
 		$currentRack = '';
 	}
