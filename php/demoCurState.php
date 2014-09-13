@@ -1,6 +1,6 @@
 <?php
 	//$db is the var name of the connected database
-	include("db_connect");
+	require_once('db_connect.php');
 ?>
 <html>
 	
@@ -20,12 +20,12 @@
 			</tr>
 		
 		<?php
-			$qry = $db->prepare("SELECT * FROM BuyCycle.Slots");
+			$qry = $db->prepare("SELECT * FROM BuyCycle.Slots WHERE rackid = '12B' ORDER BY slotnum ASC");
 			$qry->execute();
 			$all = $qry->fetchAll(PDO::FETCH_BOTH);
 			$qry = null;
 
-			foreach($all as $pkey => $value) {
+			foreach($all as $pkey) {
 				$cur = $all[$pkey]['hasbike'];
 				echo $cur;
 			}
