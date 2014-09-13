@@ -12,7 +12,7 @@
 		$update->execute();
 		$update = null;
 		
-		$isTaken = null;
+	/*	$isTaken = null;
 		while ($isTaken == null) {
 			$takenQRY = $db->prepare("SELECT slotnum FROM Slots WHERE slotnum='".$currentSlot[0]."' AND hasbike=0 LIMIT 1;");
 			$takenQRY->execute();
@@ -22,7 +22,7 @@
 			
 		echo "Thank you";
 	}
-	
+	*/
 	else {
 		echo "<br />There are no bikes available.";
 	}
