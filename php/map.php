@@ -100,6 +100,7 @@ window.onload = loadScript;
 		<div class="modal-header">
 			<h4 class="modal-title">Rack: <span id="stall"></span></h4>
 		</div>
+		asdf
     </div>
   </div>
 </div>
