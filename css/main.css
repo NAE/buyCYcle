@@ -1,11 +1,11 @@
 body {
-background: #c9de96; /* Old browsers */
-background: -moz-linear-gradient(top, #c9de96 0%, #8ab66b 44%, #398235 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c9de96), color-stop(44%,#8ab66b), color-stop(100%,#398235)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top, #c9de96 0%,#8ab66b 44%,#398235 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top, #c9de96 0%,#8ab66b 44%,#398235 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top, #c9de96 0%,#8ab66b 44%,#398235 100%); /* IE10+ */
-background: linear-gradient(to bottom, #c9de96 0%,#8ab66b 44%,#398235 100%); /* W3C */
+background: #004125; /* Old browsers */
+background: -moz-linear-gradient(top, #004125 0%, #376e47 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#004125), color-stop(100%,#376e47)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #004125 0%,#376e47 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #004125 0%,#376e47 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #004125 0%,#376e47 100%); /* IE10+ */
+background: linear-gradient(to bottom, #004125 0%,#376e47 100%); /* W3C */
 }
 
 .submitClass {
