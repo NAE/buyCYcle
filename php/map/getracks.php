@@ -12,6 +12,7 @@ $sth->execute();
 $racks = $sth->fetchAll();
 
 foreach($rack as $racks){
+	echo $rack;
 	$sth2 = $db->prepare($sql2, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
 	$sth2->execute();
 	$slots = $sth2->fetchAll();
