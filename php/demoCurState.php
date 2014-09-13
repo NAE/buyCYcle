@@ -18,17 +18,7 @@
 				?>
 			</tr>
 		</table>
-		<?php
-			$qry = $db->prepare("SELECT * FROM BuyCycle.Slots WHERE rackid = '12B' ORDER BY slotnum ASC");
-			$qry->execute();
-			$all = $qry->fetchAll(PDO::FETCH_BOTH);
-			$qry = null;
-
-			foreach($all as $pkey) {
-				$cur = ;
-
-			}
-		?>
+		
 </body>
 
 </html>
