@@ -13,8 +13,11 @@ $racks = $sth->fetchAll();
 $i = 0;
 
 foreach($racks as $rack){
-	$nRows = $db->query("SELECT COUNT(*) FROM `Slots` WHERE rackid=" . $rack['rackid'] . " AND hasbike=1")->fetchColumn(); 
-	$rack['numbikes'] = $nRows;
+	$sql2 = "SELECT COUNT(*) FROM `Slots` WHERE rackid=" . $rack['rackid'] . " AND hasbike=1";
+	$sth2 = $db->prepare($sql2);
+	$sth2->execute();
+	$number_of_rows = $sth2->rowCount();
+	$rack['numbikes'] = $number_of_rows;
 	$racks[$i] = $rack;
 	$i++;
 }
