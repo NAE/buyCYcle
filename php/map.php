@@ -38,7 +38,14 @@ function initialize() {
 		data = $.parseJSON(data);
 		
 		for(var rack in data){
-			console.log(rack);
+			var rackData = data[rack];
+			var lat = rackData.lat;
+			var lon = rackData.lon;
+			var marker = new google.maps.Marker({
+				position: new google.maps.LatLng(lat, lon),
+				map: map,
+				icon: "http://www.bicycle-storage-ideas.com/wp-content/uploads/city-bike-rack-40x40.jpg"
+			});
 		}
 		
 	});
