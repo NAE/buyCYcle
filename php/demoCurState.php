@@ -41,7 +41,7 @@
 							echo "<td><img class='imgSize' src='../Graphics/lockOpen.png'></td>";
 						}
 						else {
-							echo "<td><img class='imgSize' src='../Graphics/lockClosed.png;'></td>";
+							echo "<td><img class='imgSize' src='../Graphics/lockClosed.png'></td>";
 						}
 					}
 				?>
