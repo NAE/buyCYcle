@@ -7,6 +7,8 @@
   #map-canvas { height: 100% }
 </style>
 <script type="text/javascript">
+var map;
+	
 $.post("map/getracks.php", function(data){
 	racks = data;
 });
@@ -17,8 +19,15 @@ function initialize() {
     center: new google.maps.LatLng(-34.397, 150.644)
   };
 
-  var map = new google.maps.Map(document.getElementById('map-canvas'),
+  map = new google.maps.Map(document.getElementById('map-canvas'),
       mapOptions);
+      
+  if (navigator.geolocation) {
+     navigator.geolocation.getCurrentPosition(function (position) {
+	 initialLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+	 map.setCenter(initialLocation);
+ });
+ }
 }
 
 function loadScript() {
