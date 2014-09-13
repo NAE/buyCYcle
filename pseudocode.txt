@@ -1,0 +1,141 @@
+	Index.php
+		Require_Once(DB SELECT PHP);
+		
+		If $_POST data from bookmark/tiny URL
+			Select relevant rack ID
+				$urlSelectedRack
+				
+				
+		Select from Rack table list of all racks
+			Use array to generate options in drop-down, $_allRacks
+				
+		If not logged in
+			Hide/disable submit buttons
+				
+			include Log in prompt
+			
+		If logged in
+			Show/enable submit buttons
+			
+		Generate HTML for form
+			foreach statement to generate 
+				if ($allRacks[i] == $urlSelectedRack ) {
+					$selectOption = "selected='" + $allRacks[i] + "' ";
+					}
+				else {
+					$selectOption = "";
+					}
+				<?php echo "<option name='"+ $_allRacks[i] + "' " + $selectOption + "value='" + $allRacks[i] + "' >"; ?>
+				
+				//Label ideas:
+					//Bikes available
+					//Select count from RACK_TABLE where RACK_ID = $allRacks[i] and AVAILABLE="YES"
+					//If null, $availableBikes = 0
+					
+					//Return slots available
+					//Select count from RACK_TABLE where RACK_ID = $allRacks[i] and AVAILABLE="NO"
+					//If null, $openSlots = 0
+					
+		
+		2 submit buttons
+			Rent
+			Return
+			
+	Process.php
+		Require_Once(DB SELECT PHP);
+				
+		If not logged in
+			Include log in prompt
+			
+		If renting
+			include rent.php
+			
+		If returning
+			include return.php
+			
+	Rent.php
+		Require_Once(DB SELECT PHP);
+		If not logged in
+			Include log in prompt
+			
+		Select RENTING from USER_TABLE where USER_ID=$(userid)
+			If RENTING = NO,
+				Select SLOT from RACK_TABLE where RACK_ID=$(rackid) AND AVAILABLE="YES", LIMIT 1;
+				If not null
+					Unlock $(rackid) $(slot#)
+					Send message to user
+						Please take your bike from stall $(slot#)
+					//When bike is physically removed
+					Update USER_TABLE for $(userid) 
+						RENTING = YES
+						LAST_CHECKOUT_TIME = current timestamp
+						LAST_CHECKOUT_LOC = $(rackid)
+					Update RACK_TABLE for $(rackid) $(slot#)
+						AVAILABLE="NO"
+					
+				Else
+					Sorry, this rack has no bikes available
+				
+			If RENTING = YES
+				Sorry, you're already renting
+				
+	Return.php
+		Require_Once(DB SELECT PHP);
+		If not logged in
+			Include log in prompt
+			
+		If RENTING = YES,
+				Select SLOT from RACK_TABLE where RACK_ID=$(rackid) AND AVAILABLE="NO", LIMIT 1;
+				If not null
+					Send message to user
+						Please return your bike to stall $(slot#)
+					//when bike is physically returned
+					Update USER_TABLE for $(userid)
+						RENTING = NO
+						LAST_CHECKIN_TIME = current timestamp
+						LAST_CHECKOUT_LOC = $(rackid)
+					Update RACK_TABLE for $(rackid) $(slot#)
+						AVAILABLE="YES"
+					Select LAST_CHECKIN_TIME, LAST_CHECKOUT_TIME, EMAIL, LAST_CHECKOUT_LOC, LAST_CHECKIN_LOC from USER_TABLE where USER_ID = $(userid)
+						Send to receipt.php
+						
+				Else
+					Sorry, this rack has no bikes available. Please return it to another station.
+				
+			If RENTING = YES
+				Sorry, you're already renting
+		
+	Receipt.php
+		Calculate $timeRented = LAST_CHECKIN - LAST_CHECKOUT; //probably in seconds? 
+		Calculate $amountDue = ($timeRented * $rate) + $standardFee;
+		Send email to user
+			For your rental on $date at $time
+			Rented from LAST_CHECKOUT_LOC
+			Returned to LAST_CHECKIN_LOC
+			Total time rented was $timeRented
+			You will be charged $amountDue
+			To card ending in -XXXX
+			
+			//Alternatively, could store a CURRENT_BALANCE in USER_TABLE
+			//Email sent to user says you will be charged $x.xx towards your balance
+			//"Batch" system runs checks and only charges users with a balance of -$5.00 or less
+			//Allows users to add credit to their account
+			//Prevents us from running many small transactions
+			//Allows system to give user a bike if CC is expired, as long as balance is > $5. Must update and clear balance to get bikes after that
+			//Email then says:
+				$amountDue has been deducted from your balance.
+				Your card will be charged only when you owe more than $5.
+				You will receive a separate email when this happens.
+				
+	Map stuff:
+		Request current location
+		See if there is a rack nearby
+		If yes
+			See if rack has available bikes to rent
+			See if rack has available slots to return
+			
+		
+		
+//Idea: If bike needs service, user returns it and reports it. SERVICE_NEEDED = YES, AVAILABLE = NO, until tech fixes and update it
+//Do not need to track bike ID. Bike will be locked to that stall. Users will be unable to remove bike with issue.
+
