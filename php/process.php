@@ -26,8 +26,6 @@
 		$currentRack = '';
 	}
 	
-	echo $action;
-
 	include($action.'.php');
 	
 
