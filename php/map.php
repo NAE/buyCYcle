@@ -52,14 +52,14 @@ function initialize() {
 				icon: "../img/bikerack.png"
 			});
 			
-			google.maps.event.addListener(marker, 'click', (function(marker, i) {
+			google.maps.event.addListener(marker, 'click', (function(marker) {
 				return function(){
 					//close the map menu if they clicked on the map
 					infowindow.close();
 					infowindow.setContent("test");
 					infowindow.open(map, marker);
 				}
-			})(marker, i));
+			})(marker));
 		}
 		
 	});
