@@ -7,6 +7,7 @@
 	$qry = null;
 	
 	if($currentSlot) {
+		echo "<br />Please take your bike from stall #".$currentSlot[0].".";
 		include('./rentslot.php');
 		
 		$ready = "no";
