@@ -54,6 +54,8 @@ $qry->execute();
 $allRacks = $qry->fetch(PDO::FETCH_BOTH);
 $qry = null;
 
+echo json_encode($allRacks);
+
 ?>
 <html>
 		<form id="bikeCheck" action="php/process.php" method="get">

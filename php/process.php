@@ -21,7 +21,7 @@
 		}
 		
 	else {
-		
+		$currentRack = '';
 	}
 	include($action'.php');
 	
