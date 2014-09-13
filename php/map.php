@@ -54,6 +54,7 @@ function initialize() {
 					$(".rentbutton").click(function(){
 						var rackId = $(this).attr("data-rack");
 						$("#stall").html(rackId);
+						$("#takemessage").hide();
 					});
 				}
 			})(marker, rackData, lat, lon));
@@ -102,7 +103,7 @@ window.onload = loadScript;
 		</div>
 		<div class="modal-body">
 			<button type="button" class="btn btn-success" id="confirmrentbutton">Confirm Rent</button>
-			<h5 id="takemessage" class="hidden">Please take your bike from stall #<span id="stalllabel" class="label label-info"></span></h5>
+			<h5 id="takemessage">Please take your bike from stall #<span id="stalllabel" class="label label-info"></span></h5>
 		</div>
     </div>
   </div>
