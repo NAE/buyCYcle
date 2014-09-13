@@ -4,7 +4,7 @@
 	
 	if(isset($_GET['rack'])) {
 		$urlSelectRack = $_GET['rack']; 
-		console.log("URL Select Rack: ". $urlSelectRack);
+		echo "URL Select Rack: ". $urlSelectRack;
 	}
 
 
@@ -49,7 +49,7 @@ $qry = null;
 				<select name="station_ID" size="1" id="stationSelect">
 				
 					<?php foreach($allRacks as $pkey => $racks) {  
-					console.log($allRacks[$pkey]['rackid']);
+					echo $allRacks[$pkey]['rackid'];
 					$currentRack = $allRacks[$pkey]['rackid'];
 					
 					echo $currentRack;
