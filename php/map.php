@@ -55,7 +55,7 @@ function initialize() {
 			google.maps.event.addListener(marker, 'click', (function(marker, rackData) {
 				return function(){
 					//close the map menu if they clicked on the map
-					var content = "<h3>Rack: " + rackData['rackid'] + "</h3><h4>Bikes available: " + rackData['numbikes'] + "</h4>";
+					var content = "<h3>Rack: " + rackData['rackid'] + "</h3><h4>Bikes available: " + rackData['numbikes'] + "</h4><h4>Empty slots: " + rackData['emptyslots'] + "</h4>";
 					infowindow.setContent(content);
 					infowindow.open(map, marker);
 				}

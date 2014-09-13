@@ -16,6 +16,10 @@ foreach($racks as $rack){
 	$qry = $db->prepare("SELECT * FROM Slots WHERE rackid='".$rack['rackid']."' AND hasbike=1;");
 	$qry->execute();
 	$rack['numbikes'] = $qry->rowCount();
+	
+	$qry = $db->prepare("SELECT * FROM Slots WHERE rackid='".$rack['rackid']."' AND hasbike=0;");
+	$qry->execute();
+	$rack['emptyslots'] = $qry->rowCount();
 	$racks[$i] = $rack;
 	$i++;
 }
