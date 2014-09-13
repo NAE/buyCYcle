@@ -7,7 +7,7 @@
 	$qry = null;
 	
 	if($currentSlot) {
-		echo "<br />Please take your bike from stall #".$currentSlot.".";
+		echo "<br />Please take your bike from stall #".$currentSlot[0].".";
 		
 	}
 	
