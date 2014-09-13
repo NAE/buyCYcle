@@ -13,10 +13,10 @@ $racks = $sth->fetchAll();
 $i = 0;
 
 foreach($racks as $rack){
-	$qry = $db->prepare("SELECT slotnum FROM Slots WHERE rackid='".$rack['rackid']."' AND hasbike=1;");
+	$qry = $db->prepare("SELECT * FROM Slots WHERE rackid='".$rack['rackid']."' AND hasbike=1;");
 	$qry->execute();
-	$currentSlot = $qry->fetch(PDO::FETCH_BOTH);
-	$rack['numbikes'] = count($currentSlot);
+	$slots = $qry->fetch(PDO::FETCH_BOTH);
+	$rack['numbikes'] = count($slots);
 	$racks[$i] = $rack;
 	$i++;
 }
