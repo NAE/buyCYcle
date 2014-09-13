@@ -11,7 +11,7 @@
 <body>
 	<center>
 		<div style='margin-top: 120px;'></div>
-		<div style='background-color: #004125;'>
+		<div style='background-color: #004125; width: 1400px; height: 300px;'>
 		<table>
 			<tr>
 				<?php
