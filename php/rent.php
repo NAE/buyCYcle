@@ -60,14 +60,29 @@ echo "<br />Rent works";
 
 <script type="text/javascript">
 
-	function initialize() {
+	function checkLoop() {
+		checkForTaken();
+		
+		setTimeout("checkLoop()", 500);
+		
+
+	}
+	
+	function checkForTaken() {
+		
 		$.post("./rentwait.php",{currentRack : "<?php echo $currentRack ?>", currentSlot : "<?php echo $currentSlot[0] ?>"}, function(data){
 			console.log(data);
+			
+			if (data) {
+			
 			$("#bikelabel").removeClass("label-danger").addClass("label-success").html("Thank you!");
+			
+			}
 		});
+		
 	}
 
-	initialize();
+	checkLoop();
 </script>
 
 </head>
