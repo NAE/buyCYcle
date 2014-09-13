@@ -8,6 +8,9 @@
 	
 	if($currentSlot) {
 		echo "<br />Please take your bike from stall #".$currentSlot[0].".";
+		$update = $db->prepare("UPDATE Slots SET unlock=1 where rackid='".$currentRack."' and slotnum='".$currentSlot[0]."';");
+		$update->execute();
+		$update = null;
 		
 	}
 	
