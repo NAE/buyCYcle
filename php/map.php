@@ -47,7 +47,7 @@ function initialize() {
 					+ "<h4>Bikes available: <span class='label label-info'>" + rackData['numbikes'] + "</span></h4>"
 					+ "<h4>Empty slots: <span class='label label-info'>" + rackData['emptyslots'] + "</span></h4>"
 					+ "<a class='btn btn-info' target='_blank' href='http://maps.google.com/maps?daddr="+lat+","+lon+"&amp;ll='>Directions</a>"
-					+ " <button data-rack='" + rackData['rackid'] + "' type='button' class='btn btn-success rentbutton'>Rent</button>";
+					+ "<button class='btn btn-success rentbutton' data-rack='" + rackData['rackid'] + "' data-toggle='modal' data-target='.rentmodal'>Rent</button>";
 					infowindow.setContent(content);
 					infowindow.open(map, marker);
 					
@@ -92,6 +92,14 @@ window.onload = loadScript;
 <body>
 
 <div id="map-canvas" style="width: 100%; height: 100%"></div>
+
+<div class="modal fade rentmodal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      Rentyobikehere
+    </div>
+  </div>
+</div>
 
 </body>
 </html>
