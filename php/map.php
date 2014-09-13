@@ -8,28 +8,29 @@
 </style>
 <script type="text/javascript">
 var map;
-	
-$.post("map/getracks.php", function(data){
-	racks = data;
-});
 
 function initialize() {
-  var mapOptions = {
-    zoom: 8,
-    center: new google.maps.LatLng(-34.397, 150.644)
-  };
+	var mapOptions = {
+		zoom: 12,
+		center: new google.maps.LatLng(41.96, -93.74)
+	};
 
-  map = new google.maps.Map(document.getElementById('map-canvas'),
-      mapOptions);
-  
-  setTimeout(function(){
+	map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+	setTimeout(function(){
 		if (navigator.geolocation) {
 			navigator.geolocation.getCurrentPosition(function (position) {
+				console.log(position);
 				initialLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
 				map.setCenter(initialLocation);
 			});
 		}
 	}, 300);
+
+	$.post("map/getracks.php", function(data){
+		data = $.parseJSON(data);
+		console.log(data);
+	});
 }
 
 function loadScript() {
