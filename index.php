@@ -109,7 +109,7 @@ $qry = null;
 			<tr>
 				<td>Bikes available:</td> <td id="bikesAvail"></td>
 			</tr>
-						<tr>
+			<tr>
 				<td>Open slots:</td> <td id="openSlots"></td>
 			</tr>
 			<tr>			
