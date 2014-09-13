@@ -13,7 +13,7 @@
 		$update = null;
 		
 		$isTaken = null;
-		while (!$isTaken) {
+		while ($isTaken == null) {
 			$takenQRY = $db->prepare("SELECT slotnum FROM Slots WHERE slotnum='".$currentSlot[0]."' AND hasbike=0 LIMIT 1;");
 			$takenQRY->execute();
 			$isTaken = takenQRY->fetch(PDO::FETCH_BOTH);
