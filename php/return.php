@@ -26,5 +26,5 @@
 				Sorry, you're already renting
 */
 
-
+ echo "Return works";
 ?>
