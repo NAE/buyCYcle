@@ -66,39 +66,7 @@ $qry = null;
 <link rel="stylesheet" type="text/css" href="./css/main.css">
 </head>
 		<form id="bikeCheck" action="php/process.php" method="post">
-		<script type="text/javascript">
-		
-		function getCurrSelect(selection) {
-			var currSelect = selection.value;
-			
-			$.post("./php/map/getracks.php", {}, function(data){
-				data = $.parseJSON(data);
-				for(var rack in data) {
-					var rackData = data[rack];
-				
-			
-			}
-			});
-			
-			//$('#bikesAvail').html("Test");
-			
-		}
-		
-		
-		
-		/*
-		
-			for(var rack in data){
-			var rackData = data[rack];
-			var lat = rackData.lat;
-			var lon = rackData.lon;
-			var marker = new google.maps.Marker({
-				position: new google.maps.LatLng(lat, lon),
-				map: map,
-				icon: "../img/bikerack.png"
-			});
-		*/
-		</script>
+
 			<table id="rackTable">
 			<tr> <td>Station ID: </td>
 				<td>
@@ -121,7 +89,15 @@ $qry = null;
 				<script type="text/javascript">
 		
 					$('#stationSelect').change(function() {
-						alert($(this).val());
+						$.post("./php/map/getracks.php", {}, function(data){
+							data = $.parseJSON(data);
+							for(var rack in data) {
+								var rackData = data[rack];
+							}
+						});
+						
+						$('#bikesAvail').html(rackData['numbikes'];
+						$('#openSlots').html(rackData['emptyslots'];
 					}
 					
 					);
