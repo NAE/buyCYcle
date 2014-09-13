@@ -13,11 +13,11 @@ $racks = $sth->fetchAll();
 $i = 0;
 
 foreach($racks as $rack){
-	$sql2 = "SELECT * FROM Slots WHERE rackid=" . $rack['rackid'] . " AND hasbike=1";
+	$sql2 = "SELECT COUNT(*) FROM Slots WHERE rackid=" . $rack['rackid'] . " AND hasbike=1";
 	$sth2 = $db->prepare($sql2);
 	$sth2->execute();
 	$slots = $sth2->fetchAll(PDO::FETCH_BOTH);
-	$rack['numbikes'] = count($slots);
+	$rack['numbikes'] = $slots;
 	$racks[$i] = $rack;
 	$i++;
 }
