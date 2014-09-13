@@ -63,6 +63,7 @@ echo "<br />Rent works";
 	function initialize() {
 		$.post("./rentwait.php",{currentRack : "<?php echo $currentRack ?>", currentSlot : "<?php echo $currentSlot[0] ?>"}, function(data){
 			console.log(data);
+			$("#bikelabel").removeClass("label-danger").addClass("label-success").html("Thank you!");
 		});
 	}
 
@@ -71,6 +72,9 @@ echo "<br />Rent works";
 
 </head>
 <body>
+	
+	<span id="bikelabel" class="label label-danger">Please take bike!</span>
+	
 </body>
 
 </html>
