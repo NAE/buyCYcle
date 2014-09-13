@@ -49,8 +49,9 @@ $qry = null;
 				<select name="station_ID" size="1" id="stationSelect">
 				
 					<?php foreach($allRacks as $pkey => $racks) {  
+					console.log($allRacks[$pkey]['rackid']);
 					$currentRack = $allRacks[$pkey]['rackid'];
-					echo $allRacks[$pkey]['rackid'];
+					
 					echo $currentRack;
 					if($urlSelectRack) {
 						if ($currentRack == $urlSelectRack ) {
