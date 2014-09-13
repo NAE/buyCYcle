@@ -4,61 +4,14 @@
 	
 	if(isset($_GET['rack'])) {
 		$urlSelectRack = $_GET['rack']; 
+		echo $urlSelectRack;
 	}
-/**
-	If $_POST data from bookmark/tiny URL
-			Select relevant rack ID
-				$urlSelectedRack
-				
-				
-		Select from Rack table list of all racks
-			Use array to generate options in drop-down, $_allRacks
-				
-		If not logged in
-			Hide/disable submit buttons
-				
-			include Log in prompt
-			
-		If logged in
-			Show/enable submit buttons
-			
-			Generate HTML for form
-				foreach statement to generate 
-					if ($allRacks[i] == $urlSelectedRack ) {
-						$selectOption = "selected='" + $allRacks[i] + "' ";
-						}
-					else {
-						$selectOption = "";
-						}
-					<?php echo "<option name='"+ $_allRacks[i] + "' " + $selectOption + "value='" + $allRacks[i] + "' >"; ?>
-					
-					//Label ideas:
-						//Bikes available
-						//Select count from RACK_TABLE where RACK_ID = $allRacks[i] and AVAILABLE="YES"
-						//If null, $availableBikes = 0
-						
-						//Return slots available
-						//Select count from RACK_TABLE where RACK_ID = $allRacks[i] and AVAILABLE="NO"
-						//If null, $openSlots = 0
-						
-			
-			2 submit buttons
-				Rent
-				Return
-				
-		If not logged in
-			include login.html
-			
-*/
+
 
 $qry = $db->prepare("SELECT rackid from BuyCycle.Racks ORDER BY rackid ASC");
 $qry->execute();
 $allRacks = $qry->fetchAll(PDO::FETCH_BOTH);
 $qry = null;
-
-//$count = $db->query("SELECT count(*) from Slots 
-
-
 
 ?>
 <html>
@@ -97,14 +50,13 @@ $qry = null;
 				
 					<?php foreach($allRacks as $pkey => $racks) {  
 					$currentRack = $allRacks[$pkey]['rackid'];
-					if(isset($urlSelectedRack)) {
-						if ($currentRack == $urlSelectedRack ) {
+					if($urlSelectRack) {
+						if ($currentRack == $urlSelectRack ) {
 							$selectOption = "selected='" + $currentRack + "' ";
 						}
 					}
 					else { 
 						$selectOption = "";
-						
 					}
 					
 					?>
