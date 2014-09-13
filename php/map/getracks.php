@@ -13,8 +13,7 @@ $racks = $sth->fetchAll();
 $i = 0;
 
 foreach($racks as $rack){
-	echo $rack['rackid'];
-	$sql2 = "SELECT * FROM Slots WHERE rackid=" . $rack['rackid'] . " AND hasbike=1";
+	$sql2 = "SELECT * FROM Slots WHERE rackid='" . $rack['rackid']' . " AND hasbike=1";
 	$sth2 = $db->prepare($sql2, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
 	$sth2->execute();
 	$slots = $sth2->fetchAll();
