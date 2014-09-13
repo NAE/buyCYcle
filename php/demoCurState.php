@@ -27,10 +27,10 @@
 			foreach($all as $pkey) {
 				$cur = $pkey['hasbike'];
 				if($cur == 1) {
-					echo "<td>".<img src='../Graphics/greenBike.png'>."</td>";
+					echo "<td><img src='../Graphics/greenBike.png'></td>";
 				}
 				else {
-					echo "<td>".<img src='../Graphics/redBike.png'>."</td>";
+					echo "<td><img src='../Graphics/redBike.png'></td>";
 				}
 			}
 		?>
