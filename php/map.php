@@ -28,20 +28,8 @@ function initialize() {
 		maxWidth: 200
 	});
 
-	setTimeout(function(){
-		if (navigator.geolocation) {
-			navigator.geolocation.getCurrentPosition(function (position) {
-				console.log(position);
-				initialLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-				map.setCenter(initialLocation);
-			});
-		}
-	}, 300);
-
 	$.post("map/getracks.php", {}, function(data){
-		console.log(data);
 		data = $.parseJSON(data);
-		console.log(data);
 		for(var rack in data){
 			var rackData = data[rack];
 			var lat = rackData.lat;
@@ -52,14 +40,14 @@ function initialize() {
 				icon: "../img/bikerack.png"
 			});
 			
-			google.maps.event.addListener(marker, 'click', (function(marker, rackData) {
+			google.maps.event.addListener(marker, 'click', (function(marker, rackData, lat, lon) {
 				return function(){
 					//close the map menu if they clicked on the map
-					var content = "<h3>Rack: " + rackData['rackid'] + "</h3><h4>Bikes available: " + rackData['numbikes'] + "</h4><h4>Empty slots: " + rackData['emptyslots'] + "</h4>";
+					var content = "<h3>Rack: " + rackData['rackid'] + "</h3><h4>Bikes available: " + rackData['numbikes'] + "</h4><h4>Empty slots: " + rackData['emptyslots'] + "</h4><h4><a href='http://maps.google.com/maps?daddr="+lat+','+lon+'&amp;ll='>Directions</a></h4>";
 					infowindow.setContent(content);
 					infowindow.open(map, marker);
 				}
-			})(marker, rackData));
+			})(marker, rackData, lat, lon));
 		}
 		
 	});
@@ -76,12 +64,13 @@ function loadScript() {
 function putSelfOnMap(){
 	if (navigator.geolocation){
 		return navigator.geolocation.getCurrentPosition(function(position){
-			console.log(position);
+			var initialLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
 			var meMarker = new google.maps.Marker({
-				position: new google.maps.LatLng(position.coords.latitude, position.coords.longitude),
+				position: initialLocation,
 				map: map,
 				icon : "../img/me.png",
 			});
+			map.setCenter(initialLocation);
 		});
 	}
 }
