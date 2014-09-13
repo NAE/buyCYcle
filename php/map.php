@@ -43,7 +43,7 @@ function initialize() {
 			google.maps.event.addListener(marker, 'click', (function(marker, rackData, lat, lon) {
 				return function(){
 					//close the map menu if they clicked on the map
-					var content = "<h3>Rack: " + rackData['rackid'] + "</h3><span class='label label-info'>Bikes available: " + rackData['numbikes'] + "</span><br><span class='label label-info'>Empty slots: " + rackData['emptyslots'] + "</span><h4><a target='_blank' href='http://maps.google.com/maps?daddr="+lat+","+lon+"&amp;ll='>Directions</a></h4>";
+					var content = "<h3>Rack: " + rackData['rackid'] + "</h3><h3>Bikes available: <span class='label label-info'>Bikes available: " + rackData['numbikes'] + "</span></h3><h3>Empty slots: <span class='label label-info'>" + rackData['emptyslots'] + "</span></h3><h3><a target='_blank' href='http://maps.google.com/maps?daddr="+lat+","+lon+"&amp;ll='>Directions</a></h3>";
 					infowindow.setContent(content);
 					infowindow.open(map, marker);
 				}
