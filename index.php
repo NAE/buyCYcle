@@ -51,7 +51,7 @@
 
 $qry = $db->prepare("SELECT rackid from BuyCycle.Racks ORDER BY rackid ASC");
 $qry->execute();
-$allRacks = $qry->fetch(PDO::FETCH_BOTH);
+$allRacks = $qry->fetchAll(PDO::FETCH_BOTH);
 $qry = null;
 
 echo json_encode($allRacks);
