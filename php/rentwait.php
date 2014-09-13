@@ -1,8 +1,9 @@
 <?php
+		require_once('./db_connect.php');
+		
 		$currentSlot = $_POST['currentSlot'];
 		$currentRack = $_POST['currentRack'];
 		
-
 		$takenQRY = $db->prepare("SELECT slotnum FROM Slots WHERE rackid='".$currentRack."' AND slotnum='".$currentSlot."' AND hasbike=0 LIMIT 1;");
 		$takenQRY->execute();
 		
