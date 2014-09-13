@@ -4,7 +4,7 @@
 	
 	if(isset($_GET['rack'])) {
 		$urlSelectRack = $_GET['rack']; 
-		echo $urlSelectRack;
+		console.log("URL Select Rack: ". $urlSelectRack);
 	}
 
 
