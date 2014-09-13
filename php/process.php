@@ -1,7 +1,7 @@
 <?php
-
+echo "TESTING";
 	require_once('php/db_connect.php');
-		echo "TESTING";
+		
 		
 	if (isset($_GET['action'])) {
 		$action = strtolower($_GET['action']);
