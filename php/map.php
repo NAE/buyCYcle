@@ -43,9 +43,18 @@ function initialize() {
 			google.maps.event.addListener(marker, 'click', (function(marker, rackData, lat, lon) {
 				return function(){
 					//close the map menu if they clicked on the map
-					var content = "<h3>Rack: " + rackData['rackid'] + "</h3><h4>Bikes available: <span class='label label-info'>" + rackData['numbikes'] + "</span></h4><h4>Empty slots: <span class='label label-info'>" + rackData['emptyslots'] + "</span></h4><h4><a target='_blank' href='http://maps.google.com/maps?daddr="+lat+","+lon+"&amp;ll='>Directions</a></h4>";
+					var content = "<h3>Rack: " + rackData['rackid'] + "</h3>"
+					+ "<h4>Bikes available: <span class='label label-info'>" + rackData['numbikes'] + "</span></h4>"
+					+ "<h4>Empty slots: <span class='label label-info'>" + rackData['emptyslots'] + "</span></h4>"
+					+ "<a target='_blank' href='http://maps.google.com/maps?daddr="+lat+","+lon+"&amp;ll='>Directions</a>"
+					+ "<button data-rack='" + rackData['rackid'] + "' type='button' class='btn btn-success rentbutton'>Rent</button>";
 					infowindow.setContent(content);
 					infowindow.open(map, marker);
+					
+					$(".rentbutton").click(function(){
+						var rackId = $(this).attr("data-rack");
+						console.log(rackId);
+					});
 				}
 			})(marker, rackData, lat, lon));
 		}
