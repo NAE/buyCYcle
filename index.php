@@ -69,17 +69,21 @@ $qry = null;
 		<script type="text/javascript">
 		function getCurrSelect(selection) {
 			var currSelect = selection.value;
-			alert(currSelect);
-		}
-		
-		$.post("./php/map/getracks.php", {}, function(data){
-			data = $.parseJSON(data);
-			for(var rack in data) {
-				var rackData = data[rack];
+			
+			$.post("./php/map/getracks.php", {}, function(data){
+				data = $.parseJSON(data);
+				for(var rack in data) {
+					var rackData = data[rack];
 				
 			
 			}
-		});
+			});
+			
+			$.(#bikesAvail).html("Test");
+			
+		}
+		
+		
 		
 		/*
 		
