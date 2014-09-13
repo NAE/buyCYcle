@@ -10,3 +10,14 @@ body {
 	height: 100px;
 	
 }
+
+#rackTable {
+	border: 0 none;
+	
+
+}
+
+#rackTable tr td {
+	padding: 10px;
+
+}

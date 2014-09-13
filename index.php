@@ -54,6 +54,8 @@ $qry->execute();
 $allRacks = $qry->fetchAll(PDO::FETCH_BOTH);
 $qry = null;
 
+//$count = $db->query("SELECT count(*) from Slots 
+
 
 
 ?>
@@ -66,7 +68,7 @@ $qry = null;
 <link rel="stylesheet" type="text/css" href="./css/main.css">
 </head>
 		<form id="bikeCheck" action="php/process.php" method="post">
-			<table>
+			<table id="rackTable">
 			<tr> <td>Station ID: </td>
 				<td>
 				<select name="station_ID" size="1">
