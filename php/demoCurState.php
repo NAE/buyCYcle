@@ -11,7 +11,8 @@
 <body>
 	<center>
 		<div style='margin-top: 120px;'></div>
-		<table style='background-color: #004125;'>
+		<div style='background-color: #004125;'>
+		<table>
 			<tr>
 				<?php
 				for($i = 1; $i <= 10; $i++) {
@@ -48,6 +49,7 @@
 				?>
 			</tr>
 		</table>
+		</div>
 	</center>
 </body>
 
