@@ -1,7 +1,7 @@
 <?php
 	require_once('./db_connect.php');
 	
-	$qry = $db->prepare("SELECT slotnum FROM Slots WHERE rackid='".$currentRack."', hasbike=1, unlock=0 LIMIT 1;");
+	$qry = $db->prepare("SELECT `slotnum` FROM `Slots` WHERE `rackid`='".$currentRack."' AND `hasbike`=1 AND `unlock`=0 LIMIT 1;");
 	$qry->execute();
 	$currentSlot = $qry->fetch(PDO::FETCH_BOTH);
 	$qry = null;
