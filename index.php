@@ -96,8 +96,8 @@ $qry = null;
 							}
 						});
 						
-						$('#bikesAvail').html(rackData['numbikes'];
-						$('#openSlots').html(rackData['emptyslots'];
+						$('#bikesAvail').html(rackData['numbikes']);
+						$('#openSlots').html(rackData['emptyslots']);
 					}
 					
 					);
