@@ -87,6 +87,10 @@ function putSelfOnMap(){
 
 window.onload = loadScript;
 
+$("#confirmrentbutton").click(function(){
+	
+});
+
 </script>
 
 </head>
@@ -102,7 +106,7 @@ window.onload = loadScript;
 			<h4 class="modal-title">Rack: <span id="stall"></span></h4>
 		</div>
 		<div class="modal-body">
-			
+			<button type="button" class="btn btn-success" id="confirmrentbutton">Confirm Rent</button>
 		</div>
     </div>
   </div>
