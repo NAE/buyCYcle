@@ -97,10 +97,13 @@ window.onload = loadScript;
 <div class="modal fade rentmodal" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog modal-sm">
     <div class="modal-content">
+		<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
 		<div class="modal-header">
 			<h4 class="modal-title">Rack: <span id="stall"></span></h4>
 		</div>
-		asdf
+		<div class="modal-body">
+			
+		</div>
     </div>
   </div>
 </div>
