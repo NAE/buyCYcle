@@ -23,6 +23,7 @@
 		echo "Thank you";
 	}
 	*/
+	}
 	else {
 		echo "<br />There are no bikes available.";
 	}
