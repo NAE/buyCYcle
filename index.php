@@ -88,18 +88,17 @@ $qry = null;
 				</select>
 				<script type="text/javascript">
 		
-					$('#stationSelect').change(function() {
-						$.post("./php/map/getracks.php", {}, function(data){
-							data = $.parseJSON(data);
-							for(var rack in data) {
-								var rackData = data[rack];
-							}
-						});
-						
-						$('#bikesAvail').html(rackData['numbikes']);
-						$('#openSlots').html(rackData['emptyslots']);
-					}
-					
+					$('#stationSelect').change(
+						function() {
+							$.post("./php/map/getracks.php", {}, function(data){
+								data = $.parseJSON(data);
+								for(var rack in data) {
+									var rackData = data[rack];
+									$('#bikesAvail').html(rackData['numbikes']);
+									$('#openSlots').html(rackData['emptyslots']);
+								}
+							});
+						}
 					);
 				</script>
 				</td>
