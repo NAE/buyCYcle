@@ -1,6 +1,6 @@
 <?php
 echo "TESTING";
-	require_once('php/db_connect.php');
+	require_once('./db_connect.php');
 		
 		
 	if (isset($_GET['action'])) {
