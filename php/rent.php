@@ -8,7 +8,7 @@
 	
 	if($currentSlot) {
 		echo "<br />Please take your bike from stall #".$currentSlot[0].".";
-		include('./rentslot.php');
+		include('./rentunlock.php');
 		
 	}
 	else {
@@ -44,7 +44,6 @@ Require_Once(DB SELECT PHP);
 				
 */
 
-echo "<br />Rent works";
 
 
 ?>
@@ -63,7 +62,7 @@ echo "<br />Rent works";
 	function checkLoop() {
 		checkForTaken();
 		
-		setTimeout("checkLoop()", 500);
+		global = setTimeout("checkLoop()", 500);
 		
 
 	}
@@ -75,7 +74,11 @@ echo "<br />Rent works";
 			
 			if (data) {
 			
-			$("#bikelabel").removeClass("label-danger").addClass("label-success").html("Thank you!");
+				$("#bikelabel").removeClass("label-danger").addClass("label-success").html("Thank you!");
+				clearTimeout(global);
+					
+					$.post("./rentlock.php",currentRack : "<?php echo $currentRack ?>", currentSlot : "<?php echo $currentSlot[0] ?>"}, function(info) {
+					});
 			
 			}
 		});
