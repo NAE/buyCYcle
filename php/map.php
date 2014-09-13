@@ -47,13 +47,14 @@ function initialize() {
 					+ "<h4>Bikes available: <span class='label label-info'>" + rackData['numbikes'] + "</span></h4>"
 					+ "<h4>Empty slots: <span class='label label-info'>" + rackData['emptyslots'] + "</span></h4>"
 					+ "<a class='btn btn-info' target='_blank' href='http://maps.google.com/maps?daddr="+lat+","+lon+"&amp;ll='>Directions</a>"
-					+ "<button class='btn btn-success rentbutton' data-rack='" + rackData['rackid'] + "' data-toggle='modal' data-target='.rentmodal'>Rent</button>";
+					+ " <button class='btn btn-success rentbutton' data-rack='" + rackData['rackid'] + "' data-toggle='modal' data-target='.rentmodal'>Rent</button>";
 					infowindow.setContent(content);
 					infowindow.open(map, marker);
 					
 					$(".rentbutton").click(function(){
 						var rackId = $(this).attr("data-rack");
-						console.log(rackId);
+						$("#stall").html(rackId);
+						
 					});
 				}
 			})(marker, rackData, lat, lon));
@@ -95,8 +96,11 @@ window.onload = loadScript;
 
 <div class="modal fade rentmodal" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog modal-sm">
+	<div class="modal-header">
+		Rack: <span id="stall"></span>
+	</div>
     <div class="modal-content">
-      Rentyobikehere
+		
     </div>
   </div>
 </div>
