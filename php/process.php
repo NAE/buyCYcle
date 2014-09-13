@@ -30,6 +30,7 @@
 	}
 	
 	echo $action;
+	echo "TESTING";
 	include($action.'.php');
 	
 
