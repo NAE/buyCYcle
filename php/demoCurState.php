@@ -25,7 +25,7 @@
 			$all = $qry->fetchAll(PDO::FETCH_BOTH);
 			$qry = null;
 
-			foreach($all as $pkey) {
+			foreach($all as $pkey => $value) {
 				$cur = $all[$pkey]['hasbike'];
 				echo $cur;
 			}
