@@ -9,9 +9,6 @@
 	if($currentSlot) {
 		echo "<br />Please take your bike from stall #".$currentSlot[0].".";
 		include('./rentslot.php');
-				
-		include('./rentwait.html');
-
 		
 	}
 	else {
@@ -64,7 +61,7 @@ echo "<br />Rent works";
 <script type="text/javascript">
 
 	function initialize() {
-		$.post("./rentwait.php",{currentRack : <?php echo $currentRack ?>, currentSlot : <?php echo $currentSlot[0] ?>}, function(data){
+		$.post("./rentwait.php",{currentRack : "<?php echo $currentRack ?>", currentSlot : "<?php echo $currentSlot[0] ?>"}, function(data){
 		});
 	}
 
