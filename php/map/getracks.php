@@ -17,7 +17,7 @@ foreach($racks as $rack){
 	$sth2 = $db->prepare($sql2);
 	$sth2->execute();
 	$slots = $sth2->fetchAll(PDO::FETCH_BOTH);
-	print_r($slots);
+	echo $sql2;
 	$rack['numbikes'] = $slots;
 	$racks[$i] = $rack;
 	$i++;
