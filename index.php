@@ -67,6 +67,13 @@ $qry = null;
 </head>
 		<form id="bikeCheck" action="php/process.php" method="post">
 		<script type="text/javascript">
+		
+		$('#stationSelect').change(function() {
+			alert($(this).val());
+		}
+		
+		);
+		
 		function getCurrSelect(selection) {
 			var currSelect = selection.value;
 			
@@ -79,7 +86,7 @@ $qry = null;
 			}
 			});
 			
-			$.(#bikesAvail).html("Test");
+			//$('#bikesAvail').html("Test");
 			
 		}
 		
@@ -101,7 +108,7 @@ $qry = null;
 			<table id="rackTable">
 			<tr> <td>Station ID: </td>
 				<td>
-				<select name="station_ID" size="1" onchange="getCurrSelect(this)">
+				<select name="station_ID" size="1" id="stationSelect">
 					<?php foreach($allRacks as $pkey => $racks) { 
 					
 					/* if ($allRacks[i] == $urlSelectedRack ) {
