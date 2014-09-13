@@ -76,6 +76,7 @@ function loadScript() {
 function putSelfOnMap(){
 	if (navigator.geolocation){
 		return navigator.geolocation.getCurrentPosition(function(position){
+			console.log(position);
 			var meMarker = new google.maps.Marker({
 				position: new google.maps.LatLng(position.coords.latitude, position.coords.longitude),
 				map: map,
