@@ -7,29 +7,13 @@
 	$qry = null;
 	
 	if($currentSlot) {
-		echo "<br />Please take your bike from stall #".$currentSlot[0].".";
-		$update = $db->prepare("UPDATE `Slots` SET `unlock`=1 WHERE `rackid`='".$currentRack."' AND `slotnum`='".$currentSlot[0]."';");
-		$update->execute();
-		$update = null;
+		include('./rentslot.php');
 		
 		$ready = "no";
-		while ($ready == "no") {
-			if(!$isTaken) {
-				$takenQRY = $db->prepare("SELECT slotnum FROM Slots WHERE slotnum='".$currentSlot[0]."' AND hasbike=0 LIMIT 1;");
-				$takenQRY->execute();
-				
-				$isTaken = $takenQRY->fetch(PDO::FETCH_BOTH);
-				
-				$takenQRY = null;
-			}
-			else {
-				$ready = "yes";
-			}
-		}
-			
+		
+		include('./rentwait.php');
+
 		echo "Thank you";
-	
-	
 	}
 	else {
 		echo "<br />There are no bikes available.";
