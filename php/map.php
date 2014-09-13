@@ -35,6 +35,7 @@ function initialize() {
 	}, 300);
 
 	$.post("map/getracks.php", function(data){
+		console.log(data);
 		data = $.parseJSON(data);
 		console.log(data);
 		for(var rack in data){
