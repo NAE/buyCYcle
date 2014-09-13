@@ -2,6 +2,7 @@
 		$currentSlot = $_POST['currentSlot'];
 		$currentRack = $_POST['currentRack'];
 		
+		$ready == "no";
 		while ($ready == "no") {
 
 			if(!$isTaken) {
