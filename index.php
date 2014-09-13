@@ -1,6 +1,10 @@
 <?php
 
 	require_once('php/db_connect.php');
+	
+	if(isset($_GET['rack']) {
+		$urlSelectRack = $_GET['rack']; 
+	}
 /**
 	If $_POST data from bookmark/tiny URL
 			Select relevant rack ID
@@ -91,18 +95,20 @@ $qry = null;
 				<td>
 				<select name="station_ID" size="1" id="stationSelect">
 				
-					<?php foreach($allRacks as $pkey => $racks) { 
+					<?php foreach($allRacks as $pkey => $racks) {  
 					
-					/* if ($allRacks[i] == $urlSelectedRack ) {
+					if ($allRacks[i] == $urlSelectedRack ) {
 						$selectOption = "selected='" + $allRacks[i] + "' ";
 						}
-					else { */
+					else { 
 						$selectOption = "";
 						$currentRack = $allRacks[$pkey]['rackid'];
-						?>
-						<option value="<?php echo $currentRack ?>"><?php echo $currentRack ?></option>
+						}
+					?>
 						
-					<?php } ?>
+						<option value="<?php echo $currentRack ?>" <?php echo $selectOption ?> ><?php echo $currentRack ?></option>
+						
+					<?php }//end foreach ?> 
 					
 				</select>
 				<script type="text/javascript">
