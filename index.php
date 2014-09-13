@@ -95,7 +95,7 @@ $qry = null;
 								for(var rack in data) {
 									var rackData = data[rack];
 									console.log(data);
-									if ($('#stationSelect').val() == rackData['rackid'] {
+									if ($('#stationSelect').val() == rackData['rackid']) {
 										$('#bikesAvail').html(rackData['numbikes']);
 										$('#openSlots').html(rackData['emptyslots']);
 									}
