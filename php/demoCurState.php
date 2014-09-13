@@ -11,7 +11,7 @@
 <body>
 	<center>
 		<div style='margin-top: 120px;'></div>
-		<table>
+		<table style='background-color: #004125;'>
 			<tr>
 				<?php
 				for($i = 1; $i <= 10; $i++) {
