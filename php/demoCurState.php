@@ -30,7 +30,7 @@
 							echo "<td><img class='bikeImg' src='../Graphics/greenBike.png'></td>";
 						}
 						else {
-							echo "<td><img class='bikeImg' src='../Graphics/redBike.png'></td>";
+							echo "<td><img class='bikeImg' style='height: 50px; width:50px;' src='../Graphics/redBike.png'></td>";
 						}
 					}
 				?>
