@@ -2,7 +2,7 @@
 
 	require_once('php/db_connect.php');
 	
-	if(isset($_GET['rack']) {
+	if(isset($_GET['rack'])) {
 		$urlSelectRack = $_GET['rack']; 
 	}
 /**
@@ -96,15 +96,15 @@ $qry = null;
 				<select name="station_ID" size="1" id="stationSelect">
 				
 					<?php foreach($allRacks as $pkey => $racks) {  
-					
+					$currentRack = $allRacks[$pkey]['rackid'];
 					if(isset($urlSelectedRack)) {
-						if ($allRacks[i] == $urlSelectedRack ) {
-							$selectOption = "selected='" + $allRacks[i] + "' ";
+						if ($currentRack == $urlSelectedRack ) {
+							$selectOption = "selected='" + $currentRack + "' ";
 						}
 					}
 					else { 
 						$selectOption = "";
-						$currentRack = $allRacks[$pkey]['rackid'];
+						
 					}
 					
 					?>
