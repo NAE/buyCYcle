@@ -77,7 +77,7 @@ Require_Once(DB SELECT PHP);
 				$("#bikelabel").removeClass("label-danger").addClass("label-success").html("Thank you!");
 				clearTimeout(global);
 					
-					$.post("./rentlock.php",currentRack : "<?php echo $currentRack ?>", currentSlot : "<?php echo $currentSlot[0] ?>"}, function(info) {
+					$.post("./rentlock.php",{currentRack : "<?php echo $currentRack ?>", currentSlot : "<?php echo $currentSlot[0] ?>"}, function(info) {
 					});
 			
 			}
