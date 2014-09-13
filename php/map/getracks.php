@@ -15,7 +15,6 @@ $i = 0;
 foreach($racks as $rack){
 	$qry = $db->prepare("SELECT * FROM Slots WHERE rackid='".$rack['rackid']."' AND hasbike=1;");
 	$qry->execute();
-	$slots = $qry->fetch(PDO::FETCH_BOTH);
 	$rack['numbikes'] = $qry->rowCount();
 	$racks[$i] = $rack;
 	$i++;
