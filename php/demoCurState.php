@@ -14,7 +14,7 @@
 			<tr>
 				<?php
 				for($i = 1; $i <= 10; $i++) {
-					echo "<td class='numbers'>".$i."</td>";
+					echo "<td class='numbers'><center>".$i."</center></td>";
 				}
 				?>
 			</tr>
@@ -27,10 +27,19 @@
 					foreach($all as $pkey) {
 						$cur = $pkey['hasbike'];
 						if($cur == 1) {
-							echo "<td><img class='bikeImg' src='../Graphics/greenBike.png'></td>";
+							echo "<td><img class='imgSize' src='../Graphics/greenBike.png'></td>";
 						}
 						else {
-							echo "<td><img class='bikeImg' src='../Graphics/redBike.png'></td>";
+							echo "<td><img class='imgSize' src='../Graphics/redBike.png'></td>";
+						}
+					}
+					foreach($all as $pkey) {
+						$cur = $pkey['unlock'];
+						if($cur == 1) {
+							echo "<td><img class='imgSize' src='../Graphics/lockOpen.png'></td>";
+						}
+						else {
+							echo "<td><img class='imgSize' src='../Graphics/lockClosed.png;></td>";
 						}
 					}
 				?>
