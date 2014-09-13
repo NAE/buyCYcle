@@ -1,6 +1,8 @@
 <?php
+
+	require_once('db_connect.php');
 /**
-		Require_Once(DB SELECT PHP);
+		
 		
 		If $_POST data from bookmark/tiny URL
 			Select relevant rack ID
