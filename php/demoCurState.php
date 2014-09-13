@@ -33,7 +33,7 @@
 							echo "<td><img class='imgSize' src='../Graphics/redBike.png'></td>";
 						}
 					}
-					for($all as $pkey) {
+					foreach($all as $pkey) {
 						$cur = $pkey['unlock'];
 						if($cur == 1) {
 							echo "<td><img class='imgSize' src='../Graphics/lockOpen.png'></td>";
