@@ -14,7 +14,7 @@ $i = 0;
 
 foreach($racks as $rack){
 	$sql2 = "SELECT COUNT(*) FROM Slots WHERE rackid=" . $rack['rackid'] . " AND hasbike=1";
-	$sth2 = $db->prepare($sql2, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
+	$sth2 = $db->prepare($sql2);
 	$sth2->execute();
 	$number_of_rows = $sth2->fetchColumn();
 	$rack['numbikes'] = $number_of_rows;
