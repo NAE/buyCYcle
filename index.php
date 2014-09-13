@@ -2,9 +2,7 @@
 
 	require_once('php/db_connect.php');
 /**
-		
-		
-		If $_POST data from bookmark/tiny URL
+	If $_POST data from bookmark/tiny URL
 			Select relevant rack ID
 				$urlSelectedRack
 				
@@ -71,7 +69,7 @@ $qry = null;
 		<script type="text/javascript">
 		$.post("./php/map/getracks.php", {}, function(data){
 			data = $.parseJSON(data);
-			for(var racks in data) {
+			for(var rack in data) {
 				var rackData = data[rack];
 				
 			
