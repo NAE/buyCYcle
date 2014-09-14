@@ -6,7 +6,7 @@
 	$currentSlot = $qry->fetch(PDO::FETCH_BOTH);
 	$qry = null;
 	if($currentSlot) {
-		echo "<br /><center>Please return your bike to stall #".$currentSlot[0].".</center>";
+		echo "<center>Please return your bike to stall #".$currentSlot[0].".</center>";
 		include('./returnunlock.php');
 		
 	}
