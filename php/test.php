@@ -15,7 +15,7 @@
 		$checkIn = time();
 		echo $checkIn;
 		$checkOut = $lastRented[0];
-		echo $checkOut;
+		echo "<br />".$checkOut;
 		
 		//$phpdate = strtotime($lastRented[0]);
 	//	$checkOut = date("Y-m-d H:i:s", $phpdate);
