@@ -13,8 +13,8 @@
 		//there were no rows with that slot and rack that were empty
 		return;
 	}
-	
-	$qry = $db->prepare("UPDATE Slots SET `hasbike`=0, `unlocked`=0 WHERE rackid='" . $rack . "' AND slotnum='" . $slot . "';");
+
+	$qry = $db->prepare("UPDATE `Slots` SET `hasbike`=0, `unlock`=0 WHERE `rackid`='" . $rack . "' AND `slotnum`='" . $slot . "';");
 	$qry->execute();
 
 ?>
