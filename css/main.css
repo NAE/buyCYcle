@@ -34,3 +34,8 @@ background-color: red;
 	margin-right: auto;
 	width: 500px;
 }
+
+.countlabel {
+	color: white;
+	font-weight: bold;
+}

@@ -94,13 +94,13 @@ $qry = null;
 					<div class="control-group">
 						<div class="input-group">
 							<input type="text" class="form-control" value="Bikes available:" disabled />
-							<span class="input-group-addon label-success" id="bikesAvail"></span>
+							<span class="input-group-addon label-success countlabel" id="bikesAvail"></span>
 						</div>
 					</div>
 					<div class="control-group">
 						<div class="input-group">
 							<input type="text" class="form-control" value="Open slots:" disabled />
-							<span class="input-group-addon label-success" id="openSlots"></span>
+							<span class="input-group-addon label-success countlabel" id="openSlots"></span>
 						</div>
 					</div>
 					<div class="form-actions">			
