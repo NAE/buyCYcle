@@ -45,8 +45,8 @@ $qry = null;
 			<div class="span12">
 				<form class="form-horizontal span6" id="bikeCheck" action="php/process.php" method="post" role="form">
 					<div class="input-group">
-						<label for="stationSelect">Station ID:</label>
-						<select class="form-control input-group-addon" name="station_ID" size="1" id="stationSelect">
+						<label class="input-group-addon" for="stationSelect">Station ID:</label>
+						<select class="form-control" name="station_ID" size="1" id="stationSelect">
 						
 							<?php foreach($allRacks as $pkey => $racks) {  
 								$currentRack = $allRacks[$pkey]['rackid'];
