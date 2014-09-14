@@ -7,12 +7,12 @@
 	$qry = null;
 	
 	if($currentSlot) {
-		echo "<br />Please return your bike to stall #".$currentSlot[0].".";
+		echo "<br /><center>Please return your bike to stall #".$currentSlot[0].".</center>";
 		include('./returnunlock.php');
 		
 	}
 	else {
-		echo "<br />There are no empty slots available.";
+		echo "<br /><center>There are no empty slots available.</center>";
 	}
 	
 /**

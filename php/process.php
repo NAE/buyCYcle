@@ -16,7 +16,7 @@
 		
 	if (isset($_POST['station_ID'])) {
 		$currentRack = $_POST['station_ID'];
-		echo "<br />".$currentRack;
+		echo "<br /><center>".$currentRack."</center>";
 		
 		}	
 	elseif (isset($_GET['station_ID'])) {
@@ -28,16 +28,11 @@
 	}
 	
 	include($action.'.php');
-	
-
 ?>
 <html>
 <head>
-
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-<script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 </head>
 </html>

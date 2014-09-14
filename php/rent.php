@@ -7,12 +7,12 @@
 	$qry = null;
 	
 	if($currentSlot) {
-		echo "<br />Please take your bike from stall #<span id='selectedstall'>".$currentSlot[0]."</span>.";
+		echo "<br/><center>Please take your bike from stall #<span id='selectedstall'>".$currentSlot[0]."</span>.</center>";
 		include('./rentunlock.php');
 		
 	}
 	else {
-		echo "<br />There are no bikes available.";
+		echo "<center><br>There are no bikes available.</center>";
 	}
 	
 /**
@@ -43,11 +43,7 @@ Require_Once(DB SELECT PHP);
 				Sorry, you're already renting
 				
 */
-
-
-
 ?>
-
 
 <html>
 
@@ -55,7 +51,6 @@ Require_Once(DB SELECT PHP);
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-
 
 <script type="text/javascript">
 
