@@ -12,7 +12,7 @@
 			<div class="qrText">12B</div>
 		</td>
 		<td>
-			<img src="../img/12B.jpg">
+			<img style = "width:250px; height:250px;" src="../img/12B.jpg">
 		</td>
 	</tr>
 </table>
