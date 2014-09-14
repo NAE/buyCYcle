@@ -3,7 +3,7 @@
 	<link rel="stylesheet" type="text/css" href="../css/main.css">
 </head>
 <body>
-<div style="background-color: rgba(0,0,0,0.5);">
+<div style="background-color: rgba(0,0,0,0.5); width: 600px; height: 600px;">
 <center>
 <table cellspacing="40">
 	<tr>
