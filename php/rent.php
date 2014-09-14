@@ -6,7 +6,7 @@
 	$currentSlot = $qry->fetch(PDO::FETCH_BOTH);
 	$qry = null;
 	if($currentSlot) {
-		echo "<center>Please take your bike from stall #<span id='selectedstall'>".$currentSlot[0]."</span>.</center>";
+		echo "<center><div style='height: 18px;'>Please take your bike from stall #<span id='selectedstall'>".$currentSlot[0]."</span>.</div></center>";
 		include('./rentunlock.php');
 		
 	}
