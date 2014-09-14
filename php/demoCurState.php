@@ -58,11 +58,11 @@ function updateContents(){
 		$("#bikerow").html("");
 		$("#lockrow").html("");
 		for (var bike in data){
-			console.log(bike);
-			var slotNum = bike['slotnum'];
-			var rackId = bike['rackid'];
-			var hasBike = bike['hasbike'];
-			var unlock = bike['unlock'];
+			var bikeData = data[bike];
+			var slotNum = bikeData['slotnum'];
+			var rackId = bikeData['rackid'];
+			var hasBike = bikeData['hasbike'];
+			var unlock = bikeData['unlock'];
 			
 			var tdString;
 			if(hasBike == "1"){
