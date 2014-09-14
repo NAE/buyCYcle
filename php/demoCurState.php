@@ -64,7 +64,7 @@ function updateContents(){
 			var unlock = bike['unlock'];
 			
 			var tdString;
-			if(hasBike){
+			if(hasBike == "1"){
 				tdString = "<td><img class='imgSize' src='../Graphics/greenBike.png'></td>";
 			}else{
 				tdString = "<td><img class='imgSize' src='../Graphics/redBike.png'></td>";
