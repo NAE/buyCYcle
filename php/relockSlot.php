@@ -6,6 +6,6 @@
 	
 	
 	$qry = $db->prepare("UPDATE Slots SET hasbike=0, unlock=0 WHERE rackid='" . $rack . "' AND slotnum='" . $slot . "';");
-	$qry->update();
+	$qry->execute();
 
 ?>
