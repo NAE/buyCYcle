@@ -13,12 +13,14 @@
 		$rental = $db->prepare("SELECT `lastrented`, `curbalance` FROM `Users` WHERE `userid`='846881035' LIMIT 1;");
 		$rental->execute();
 		
-		$checkOut = $rental->fetch(PDO::FETCH_BOTH);
+		$current = $rental->fetch(PDO::FETCH_BOTH);
 		$rental = null;
-		$checkIn = date();
-		$difference = $checkIn - $checkOut['lastrented'];
+		$checkIn = new DateTime();
+		$checkOut = new DateTime($current['lastrented']);
+		$difference = $checkIn->diff($checkOut);
+		$echo $difference;
 		$charge = $difference * -.25;
-		$balance = $charge + $checkOut['curbalance'];
+		$balance = $charge + $current['curbalance'];
 		
 		//update the current balance
 		$updateBalance = $db->prepare("UPDATE `Users` SET `curbalance`='".$balance."' WHERE `userid`=`846881035`;");
