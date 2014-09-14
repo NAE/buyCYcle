@@ -1,7 +1,8 @@
 
 <?php
 	require_once('./db_connect.php');
-		
+	echo "<div style='height: 80px;'></div>";
+	echo "div style='width: 400px; height: 400px; background-color: black;'>"
 	if (isset($_POST['action'])) {
 		$action = strtolower($_POST['action']);
 		
@@ -28,6 +29,7 @@
 	}
 	
 	include($action.'.php');
+	echo "</div>";
 ?>
 <html>
 <head>
@@ -35,4 +37,6 @@
 	<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 	<script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 </head>
+<body>
+</body>
 </html>
