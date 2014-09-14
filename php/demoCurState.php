@@ -18,11 +18,6 @@
 		<center>
 		<table>
 			<tr id="bikerow">
-				<?php
-				for($i = 1; $i <= 10; $i++) {
-					echo "<td><center><div class='numbers' style='font-size: 24px;'>".$i."</div></center></td>";
-				}
-				?>
 			</tr>
 			<tr id="lockrow">
 			</tr>
