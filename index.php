@@ -41,7 +41,7 @@ $qry = null;
 				</script>
 </head>
 	<div class="squarebox container">
-		<div class="well shadowed">
+		<div class="well">
 			<div class="row">
 				<div class="span12">
 					<form class="form-horizontal span6" id="bikeCheck" action="php/process.php" method="post" role="form">
@@ -121,7 +121,7 @@ $qry = null;
 		<div class="well">
 			<div class="form-actions">
 				<a style="text-align: right;" class="btn btn-info" href="php/map.php">Map</a>
-				<a style="text-align: right;" class="btn btn-info" href="php/demoCurState.php">Map</a>
+				<a style="text-align: right;" class="btn btn-info" href="php/demoCurState.php">Bike Rack</a>
 			</div>
 		</div>
 	</div>
