@@ -43,6 +43,7 @@ background-color: red;
 .squarebox {
 	padding-top: 10px;
 	background: white;
+	box-shadow: 0em 0em .2em black;
 }
 
 .shadowed {
