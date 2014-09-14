@@ -1,7 +1,5 @@
 <?php
 	require_once('./db_connect.php');
-	
-		exec('echo "You owe # for your recent Buy-Cycle ride." | mail -s "Your recent Buy-Cycle ride" 5158651636@vmobl.com');
 			
 		$currentRack = $_POST['currentRack'];
 		$currentSlot = $_POST['currentSlot'];
