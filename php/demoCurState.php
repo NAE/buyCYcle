@@ -12,6 +12,7 @@
 	<center>
 		<div style='margin-top: 120px;'></div>
 		<div style='background-image: url("../Graphics/greenLines.jpg"); width: 1300px; height: 340px; padding: 20px;'>
+		<center>
 		<table>
 			<tr>
 				<?php
@@ -49,6 +50,7 @@
 				?>
 			</tr>
 		</table>
+		</center>
 		</div>
 	</center>
 </body>
