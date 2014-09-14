@@ -2,18 +2,20 @@
 	require_once('./db_connect.php');
 		
 		//Calculate rental time
-		$rental = $db->prepare("SELECT * FROM `Users` WHERE `userid`='846881035' LIMIT 1;");
-		$rental->execute();
-		$current = $rental->fetchAll(PDO::FETCH_BOTH);
-		$rental = null;
+		$rentalQry = $db->prepare("SELECT `lastrented` FROM `Users` WHERE `userid`='846881035' LIMIT 1;");
+		$rentalQry->execute();
+		$lastRented = $rentalQry->fetch(PDO::FETCH_BOTH);
+		$rentalQry = null;
+		
+		$balanceQry  $db->prepare("SELECT `curbalance` FROM `Users` WHERE `userid`='846881035' LIMIT 1;");
+		$balanceQry->execute();
+		$initialBalance = $balanceQry->fetch(PDO::FETCH_BOTH);
 		
 		
 		$checkIn = date("Y-m-d H:i:s");
 		$echo $checkIn;
 		
-		foreach($current as $pkey => $value) {
-			$checkOut = $current[$pkey]['lastrented'];
-		}
+		
 		// $difference = $checkIn->diff($checkOut);
 		// $echo $difference;
 		// $charge = $difference * -.25;
