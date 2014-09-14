@@ -49,9 +49,9 @@ function updateContents(){
 			
 			var bikeTdString;
 			if(hasBike == "1"){
-				bikeTdString = "<td><img class='imgSize bike' data-slot='" + slotNum + "' data-rack='" + rackId + "' src='../Graphics/greenBike.png?test=1'></td>";
+				bikeTdString = "<td><img class='imgSize bike bike-take' data-slot='" + slotNum + "' data-rack='" + rackId + "' src='../Graphics/greenBike.png?test=1'></td>";
 			}else{
-				bikeTdString = "<td><img class='imgSize bike' data-slot='" + slotNum + "' data-rack='" + rackId + "' src='../Graphics/redBike.png?test=1'></td>";
+				bikeTdString = "<td><img class='imgSize bike bike-return' data-slot='" + slotNum + "' data-rack='" + rackId + "' src='../Graphics/redBike.png?test=1'></td>";
 			}
 			$(bikeTdString).appendTo("#bikerow");
 			
@@ -64,8 +64,11 @@ function updateContents(){
 			$(lockTdString).appendTo("#lockrow");
 		}
 		
-		$(".bike").click(function(){
+		$(".bike-take").click(function(){
 			takeBike($(this).attr("data-rack"), $(this).attr("data-slot"));
+		});
+		$(".bike-return").click(function(){
+			returnBike($(this).attr("data-rack"), $(this).attr("data-slot"));
 		});
 	});
 	setTimeout("updateContents();", 1000);
@@ -73,6 +76,12 @@ function updateContents(){
 
 function takeBike(rack, slot){
 	$.post("takeBike.php", {rack: rack, slot: slot}, function(data){
+		console.log(data);
+	});
+}
+
+function returnBike(rack, slot){
+	$.post("returnBike.php", {rack: rack, slot: slot}, function(data){
 		console.log(data);
 	});
 }
