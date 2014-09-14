@@ -55,6 +55,8 @@ function updateContents(){
 	$.post("getCurState.php", {rack: "12B"}, function(data){
 		data = $.parseJSON(data);
 		console.log(data);
+		$("#bikerow").html("");
+		$("#lockrow").html("");
 		for (var bike in data){
 			var slotNum = bike['slotnum'];
 			var rackId = bike['rackid'];
