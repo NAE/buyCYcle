@@ -53,7 +53,7 @@ $qry = null;
 						
 						if(!$urlSelectRack) { ?>
 							<option value="<?php echo $currentRack ?>"><?php echo $currentRack ?></option>
-						<?
+						<?php
 							}
 						else {
 													
