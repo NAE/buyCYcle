@@ -3,8 +3,7 @@
 	require_once('php/db_connect.php');
 	
 	if(isset($_GET['rack'])) {
-		$urlSelectRack = $_GET['rack']; 
-		echo "URL Select Rack: ". $urlSelectRack;
+		$urlSelectRack = $_GET['rack'];
 	}
 
 
@@ -98,10 +97,10 @@ $qry = null;
 				<td>Open slots:</td> <td id="openSlots"></td>
 			</tr>
 			<tr>			
-				<td colspan="2"><input type="submit" class="submitClass" name="action" value="Rent"></td>
+				<td colspan="2"><input type="submit" class="btn btn-success submitClass" name="action" value="Rent"></td>
 			</tr>
 			<tr>
-				<td colspan="2"><input type="submit" class="submitClass" name="action" value="Return"></td>
+				<td colspan="2"><input type="submit" class="btn btn-success submitClass" name="action" value="Return"></td>
 			</tr>
 		</form>
 	</div>
