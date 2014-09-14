@@ -34,9 +34,19 @@
 	</center>
 </body>
 <script type="text/javascript">
+	
+var rack = "12B";
+
+<?php
+
+	if (isset($_GET['rack'])){
+		echo "rack = " . $_GET['rack'];
+	}
+
+?>
 
 function updateContents(){
-	$.post("getCurState.php", {rack: "12B"}, function(data){
+	$.post("getCurState.php", {rack: rack}, function(data){
 		data = $.parseJSON(data);
 		$("#bikerow").html("");
 		$("#lockrow").html("");
