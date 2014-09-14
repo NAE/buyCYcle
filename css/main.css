@@ -70,3 +70,9 @@ background-color: #B52E2B;
 .thanks .container {
 	color:white;
 }
+.thanks h1 {
+	font-weight:bold;
+}
+.thanks a {
+	color:#04756F;
+}
