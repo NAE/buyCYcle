@@ -40,6 +40,6 @@ background-color: red;
 	font-weight: bold;
 }
 
-#centersubmits input {
-	text-align: right;
+.shadowed {
+	box-shadow: 0em 0em .3em black;
 }
