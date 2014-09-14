@@ -12,7 +12,7 @@
 </head>
 
 <body>
-		<center><div style="width: 40px; height: 40px;"><h1 style="color:black;">12B</h3></div></center>
+		<center><div style="width: 40px; height: 40px; background-color: #f5f5f5; border-radius: 5px;"><h1 style="color:black;">12B</h3></div></center>
 		<div style='margin-top: 50px;'></div>
 		<center>
 		<div style='background-color: white; width: 1300px; height: 425px; padding-top: 25px; border-radius: 5px;'>
