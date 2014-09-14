@@ -27,7 +27,7 @@
 		$newBalance = $initialBalance[0] + $charge;
 		echo "<br />".$charge;
 		echo "<br />".$newBalance;
-		
+		$newBalance = number_format($newBalance,2);
 		
 		// //update the current balance
 		$updateBalance = $db->prepare("UPDATE `Users` SET `curbalance`='".$newBalance."' WHERE `userid`=`846881035`;");
