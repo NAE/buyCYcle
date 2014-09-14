@@ -74,7 +74,7 @@ function updateContents(){
 }
 
 function takeBike(rack, slot){
-	$.post("relockSlot.php", {rack: rack, slot: slot}, function(data){
+	$.post("takeBike.php", {rack: rack, slot: slot}, function(data){
 		console.log(data);
 	});
 }
