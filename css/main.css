@@ -40,8 +40,6 @@ background-color: red;
 	font-weight: bold;
 }
 
-#centersubmits {
-	margin-left: auto;
-	margin-right: auto;
-	width: auto;
+#centersubmits input {
+	text-align: right;
 }
