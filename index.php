@@ -40,7 +40,7 @@ $qry = null;
 					);
 				</script>
 </head>
-	<div class="well container">
+	<div class="well container well-small">
 		<form id="bikeCheck" action="php/process.php" method="post" role="form">
 			<div class="form-group">
 				<label for="stationSelect">Station ID:</label>
