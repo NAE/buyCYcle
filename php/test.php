@@ -12,7 +12,7 @@
 		$initialBalance = $balanceQry->fetch(PDO::FETCH_BOTH);
 		
 		
-		$checkIn = new DateTime();
+		$checkIn = new DateTime;
 		// $phpdate = strtotime($lastRented[0]);
 		// $checkOut = date("Y-m-d H:i:s", $phpdate);
 		
