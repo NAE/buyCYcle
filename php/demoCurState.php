@@ -13,7 +13,7 @@
 
 <body>
 		<div style='margin-top: 50px;'></div>
-		<h3 style="color: white;">Abstraction of Rack with Bikes & Locks</h3>
+		<h3 style="color: white; text-align: right;">Abstraction of Rack with Bikes & Locks</h3>
 		<center>
 		<div style='background-image: url("../Graphics/greenLines.png"); width: 1300px; height: 340px; padding-top: 20px; radius: 5px; background-repeat: no-repeat;'>
 		<center>
