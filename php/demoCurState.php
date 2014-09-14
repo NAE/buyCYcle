@@ -15,7 +15,7 @@
 		<div style='margin-top: 50px;'></div>
 		<center><h3 style="color: white;">Abstraction of Rack with Bikes & Locks</h3></center>
 		<center>
-		<div style='background-color: white; width: 1300px; height: 400px; padding-top: 20px; border-radius: 5px;'>
+		<div style='background-color: white; width: 1300px; height: 400px; border-radius: 5px;'>
 		<center>
 		<table>
 			<tr id="numrow">
