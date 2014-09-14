@@ -58,7 +58,7 @@
 
 
 function updateContents(){
-	$.post("getCurState.php", {rack: "12B", function(data){
+	$.post("getCurState.php", {rack: "12B"}, function(data){
 		console.log(data);
 	});
 	setTimeout("updateContents();", 1000);
