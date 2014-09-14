@@ -51,9 +51,9 @@ function updateContents(){
 			
 			var bikeTdString;
 			if(hasBike == "1"){
-				bikeTdString = "<td><img class='imgSize' src='../Graphics/greenBike.png'></td>";
+				bikeTdString = "<td><img class='imgSize' src='../Graphics/greenBike.png?test=1'></td>";
 			}else{
-				bikeTdString = "<td><img class='imgSize' src='../Graphics/redBike.png'></td>";
+				bikeTdString = "<td><img class='imgSize' src='../Graphics/redBike.png?test=1'></td>";
 			}
 			$(bikeTdString).appendTo("#bikerow");
 			
