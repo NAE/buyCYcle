@@ -43,7 +43,7 @@ $qry = null;
 	<div class="well container">
 		<div class="row">
 			<div class="span6">
-				<form id="bikeCheck" action="php/process.php" method="post" role="form">
+				<form class="form-horizontal span6" id="bikeCheck" action="php/process.php" method="post" role="form">
 					<div class="form-group">
 						<label for="stationSelect">Station ID:</label>
 						<select class="form-control" name="station_ID" size="1" id="stationSelect">
