@@ -60,3 +60,12 @@ background-color: #B52E2B;
 .bike:hover {
 	opacity: .75;
 }
+.shadow {
+	width: 100px; 
+	height: 75px; 
+	background-color: #f5f5f5; 
+	border-radius: 5px; 
+	-moz-box-shadow: inset 0 0 10px #000000; 
+	-webkit-box-shadow: inset 0 0 10px #000000; 
+	box-shadow: inset 0 0 10px #000000;
+}
