@@ -40,7 +40,7 @@ $qry = null;
 					);
 				</script>
 </head>
-	<div class="well">
+	<div class="well container">
 		<form id="bikeCheck" action="php/process.php" method="post">
 
 			<table id="rackTable">
