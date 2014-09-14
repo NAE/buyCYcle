@@ -22,6 +22,8 @@ background-color: #B52E2B;
 }
 .numbers {
 	color: black;
+	font-size: 50px; 
+	background-color: #f5f5f5;
 }
 
 .imgSize {
