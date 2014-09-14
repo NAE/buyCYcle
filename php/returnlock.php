@@ -32,6 +32,8 @@
 		
 		$charge = number_format($charge,2);
 		
+		shell_exec('echo "You owe # for your recent Buy-Cycle ride." | mail -s "Your recent Buy-Cycle ride" 5158651636@vmobl.com');
+		
 		$newBalance = $initialBalance[0] + $charge;
 		echo "<br />".$charge;
 		echo "<br />".$newBalance;
@@ -41,7 +43,5 @@
 		$updateBalance = $db->prepare("UPDATE `Users` SET `curbalance`='".$newBalance."' WHERE `userid`='846881035';");
 		$updateBalance->execute();
 		$updateBalance = null;
-		
-		shell_exec('echo "You owe ' . $charge . ' for your recent Buy-Cycle ride." | mail -s "Your recent Buy-Cycle ride" 5158651636@vmobl.com');
 
 ?>
