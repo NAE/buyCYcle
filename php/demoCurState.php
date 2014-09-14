@@ -63,6 +63,8 @@ function updateContents(){
 			var hasBike = bike['hasbike'];
 			var unlock = bike['unlock'];
 			
+			console.log(hasBike);
+			
 			var tdString;
 			if(hasBike == "1"){
 				tdString = "<td><img class='imgSize' src='../Graphics/greenBike.png'></td>";
