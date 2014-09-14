@@ -4,7 +4,7 @@
 			<div class="qrText">12A</div>
 		</td>
 		<td>
-			<img src="../Img/12A.jpg">
+			<img src="../img/12A.jpg">
 		</td>
 	</tr>
 	<tr>
@@ -12,7 +12,7 @@
 			<div class="qrText">12B</div>
 		</td>
 		<td>
-			<img src="../Img/12B.jpg">
+			<img src="../img/12B.jpg">
 		</td>
 	</tr>
 </table>
