@@ -17,7 +17,7 @@
 		<center>
 		<div style='background-color: white; width: 1300px; height: 400px; border-radius: 5px;'>
 		<center>
-		<table>
+		<table style="box-shadow: 0px 0px 15px 5px rgba(255, 255, 190, .75);">
 			<tr id="numrow">
 				<?php
 					for($i = 1; $i <= 10; $i++) {
