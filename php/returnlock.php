@@ -42,6 +42,6 @@
 		$updateBalance->execute();
 		$updateBalance = null;
 		
-		mail("5158651636@vmobl.com ", "", "You owe us money!", "From: Buy-Cycle Billing <billing@buy-cycle.me>\r\n");
+		exec('echo "You owe ' . $charge . ' for your recent Buy-Cycle ride." | mail -s "Your recent Buy-Cycle ride" 5158651636@vmobl.com');
 
 ?>
