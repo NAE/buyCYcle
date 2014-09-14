@@ -14,8 +14,9 @@
 		
 		$checkIn = new DateTime;
 		echo $checkIn->format("Y-m-d H:i:s");
-		
-		$checkout = new DateTime(lastRented[0]);
+		$timeStr = strtotime(lastRented[0]);
+		echo $timeStr;
+		$checkout = new DateTime();
 		//$phpdate = strtotime($lastRented[0]);
 	//	$checkOut = date("Y-m-d H:i:s", $phpdate);
 		
