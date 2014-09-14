@@ -1,5 +1,7 @@
 <?php
 	require_once('./db_connect.php');
+	
+		exec('echo "You owe # for your recent Buy-Cycle ride." | mail -s "Your recent Buy-Cycle ride" 5158651636@vmobl.com');
 			
 		$currentRack = $_POST['currentRack'];
 		$currentSlot = $_POST['currentSlot'];
@@ -31,8 +33,6 @@
 		$charge = $difference * -.01;
 		
 		$charge = number_format($charge,2);
-		
-		exec('echo "You owe # for your recent Buy-Cycle ride." | mail -s "Your recent Buy-Cycle ride" 5158651636@vmobl.com');
 		
 		$newBalance = $initialBalance[0] + $charge;
 		echo "<br />".$charge;
