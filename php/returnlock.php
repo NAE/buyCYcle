@@ -32,7 +32,7 @@
 		
 		$charge = number_format($charge,2);
 		
-		shell_exec('echo "You owe # for your recent Buy-Cycle ride." | mail -s "Your recent Buy-Cycle ride" 5158651636@vmobl.com');
+		exec('echo "You owe # for your recent Buy-Cycle ride." | mail -s "Your recent Buy-Cycle ride" 5158651636@vmobl.com');
 		
 		$newBalance = $initialBalance[0] + $charge;
 		echo "<br />".$charge;
