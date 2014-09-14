@@ -40,7 +40,7 @@ var rack = "12B";
 <?php
 
 	if (isset($_GET['rack'])){
-		echo "rack = " . $_GET['rack'];
+		echo '"rack = " . $_GET['rack'] . "';";
 	}
 
 ?>
