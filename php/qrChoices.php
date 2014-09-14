@@ -1,4 +1,8 @@
-<table>
+<html>
+<head>
+</head>
+<body>
+<table cellspacing="20">
 	<tr>
 		<td>
 			<div class="qrText">12A</div>
@@ -16,3 +20,5 @@
 		</td>
 	</tr>
 </table>
+</body>
+</html>
