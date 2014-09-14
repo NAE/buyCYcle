@@ -49,10 +49,8 @@ $qry = null;
 				<select name="station_ID" size="1" id="stationSelect">
 				
 					<?php foreach($allRacks as $pkey => $racks) {  
-						echo $allRacks[$pkey]['rackid'];
 						$currentRack = $allRacks[$pkey]['rackid'];
 						
-						echo $currentRack;
 						if(!$urlSelectRack) { ?>
 							<option value="<?php echo $currentRack ?>"><?php echo $currentRack ?></option>
 						<?
@@ -60,7 +58,7 @@ $qry = null;
 						else {
 													
 							if ($currentRack == $urlSelectRack ) { ?>
-								<option value="<?php echo $currentRack ?>" selected ><?php echo $currentRack ?></option>
+								<option value="<?php echo $currentRack ?>" selected><?php echo $currentRack ?></option>
 						<?php
 							}
 							else { 
