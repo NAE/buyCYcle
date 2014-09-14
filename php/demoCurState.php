@@ -19,9 +19,9 @@
 		<table>
 			<tr id="numrow">
 				<?php
-				for($i = 1; $i <= 10; $i++) {
-					echo "<td><center><div class='numbers' style='font-size: 24px;'>".$i."</div></center></td>";
-				}
+					for($i = 1; $i <= 10; $i++) {
+						echo "<td><center><div class='numbers' style='font-size: 24px;'>".$i."</div></center></td>";
+					}
 				?>
 			</tr>
 			<tr id='bikerow'>
