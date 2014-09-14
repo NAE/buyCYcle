@@ -79,7 +79,7 @@ Require_Once(DB SELECT PHP);
 					
 					$.post("./rentlock.php",{currentRack : "<?php echo $currentRack ?>", currentSlot : "<?php echo $currentSlot[0] ?>"}, function(info) {
 					});
-				window.location = "http://buy-cycle.me/Bike/";
+				window.location = "http://buy-cycle.me/Bike/thanks.html";
 			}
 		});
 		
