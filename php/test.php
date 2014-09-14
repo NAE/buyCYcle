@@ -7,7 +7,7 @@
 		$lastRented = $rentalQry->fetch(PDO::FETCH_BOTH);
 		$rentalQry = null;
 		
-	//	$balanceQry  $db->prepare("SELECT `curbalance` FROM `Users` WHERE `userid`='846881035';");
+	//	$balanceQry = $db->prepare("SELECT `curbalance` FROM `Users` WHERE `userid`='846881035';");
 	//	$balanceQry->execute();
 	//	$initialBalance = $balanceQry->fetch(PDO::FETCH_BOTH);
 		
