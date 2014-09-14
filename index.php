@@ -44,9 +44,9 @@ $qry = null;
 		<div class="row">
 			<div class="span12">
 				<form class="form-horizontal span6" id="bikeCheck" action="php/process.php" method="post" role="form">
-					<div class="control-group">
+					<div class="input-group">
 						<label for="stationSelect">Station ID:</label>
-						<select class="form-control" name="station_ID" size="1" id="stationSelect">
+						<select class="form-control input-group-addon" name="station_ID" size="1" id="stationSelect">
 						
 							<?php foreach($allRacks as $pkey => $racks) {  
 								$currentRack = $allRacks[$pkey]['rackid'];
@@ -89,11 +89,11 @@ $qry = null;
 							);
 						</script>
 					</div>
-					<div class="control-group">
+					<div class="input-group">
 						<input type="text" class="form-control" value="Bikes available:" disabled />
 						<span class="input-group-addon" id="bikesAvail"></span>
 					</div>
-					<div class="control-group">
+					<div class="input-group">
 						<input type="text" class="form-control" value="Open slots:" disabled />
 						<span class="input-group-addon" id="openSlots"></span>
 					</div>
