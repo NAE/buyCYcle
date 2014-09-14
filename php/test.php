@@ -11,7 +11,9 @@
 		$checkIn = date("Y-m-d H:i:s");
 		$echo $checkIn;
 		
-		$checkOut = $current['lastrented'];
+		foreach($current as $pkey=>$value) {
+			$checkOut = $current[$pkey]['lastrented'];
+		}
 		// $difference = $checkIn->diff($checkOut);
 		// $echo $difference;
 		// $charge = $difference * -.25;
