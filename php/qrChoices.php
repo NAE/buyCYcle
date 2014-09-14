@@ -4,7 +4,7 @@
 </head>
 <body>
 <center>
-<table cellspacing="20">
+<table cellspacing="40">
 	<tr>
 		<td>
 			<div class="qrText">12A</div>
