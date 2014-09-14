@@ -45,6 +45,7 @@ background-color: #B52E2B;
 
 .squarebox {
 	padding-top: 10px;
+	padding-bottom: 5px;
 	background: white;
 	box-shadow: 0em 0em .2em black;
 }
