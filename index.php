@@ -42,69 +42,67 @@ $qry = null;
 </head>
 	<div class="well container">
 		<div class="row">
-			<div class="span6">
-				<form class="form-horizontal span6" id="bikeCheck" action="php/process.php" method="post" role="form">
-					<div class="form-group">
-						<label for="stationSelect">Station ID:</label>
-						<select class="form-control" name="station_ID" size="1" id="stationSelect">
-						
-							<?php foreach($allRacks as $pkey => $racks) {  
-								$currentRack = $allRacks[$pkey]['rackid'];
-								
-								if(!$urlSelectRack) { ?>
-									<option value="<?php echo $currentRack ?>"><?php echo $currentRack ?></option>
-								<?php
-									}
-								else {
-															
-									if ($currentRack == $urlSelectRack ) { ?>
-										<option value="<?php echo $currentRack ?>" selected><?php echo $currentRack ?></option>
-								<?php
-									}
-									else { 
-								?>
-									<option value="<?php echo $currentRack ?>"><?php echo $currentRack ?></option>
-								<?php }
-								
-								}
-							}//end foreach ?> 
+			<form class="form-horizontal span6" id="bikeCheck" action="php/process.php" method="post" role="form">
+				<div class="form-group">
+					<label for="stationSelect">Station ID:</label>
+					<select class="form-control" name="station_ID" size="1" id="stationSelect">
+					
+						<?php foreach($allRacks as $pkey => $racks) {  
+							$currentRack = $allRacks[$pkey]['rackid'];
 							
-						</select>
-						<script type="text/javascript">
-				
-							$('#stationSelect').change(
-								function() {
-									$.post("./php/map/getracks.php", {}, function(data){
-										data = $.parseJSON(data);
-										for(var rack in data) {
-											var rackData = data[rack];
-											console.log(data);
-											if ($('#stationSelect').val() == rackData['rackid']) {
-												$('#bikesAvail').html(rackData['numbikes']);
-												$('#openSlots').html(rackData['emptyslots']);
-											}
-										}
-									});
+							if(!$urlSelectRack) { ?>
+								<option value="<?php echo $currentRack ?>"><?php echo $currentRack ?></option>
+							<?php
 								}
-							);
-						</script>
-					</div>
-					<div class="input-group">
-						<input type="text" class="form-control" value="Bikes available:" disabled />
-						<span class="input-group-addon" id="bikesAvail"></span>
-					</div>
-					<div class="input-group">
-						<input type="text" class="form-control" value="Open slots:" disabled />
-						<span class="input-group-addon" id="openSlots"></span>
-					</div>
-					<tr>			
-						<td colspan="2"><input type="submit" class="btn btn-success submitClass" name="action" value="Rent"></td>
-					</tr>
-					<tr>
-						<td colspan="2"><input type="submit" class="btn btn-success submitClass" name="action" value="Return"></td>
-					</tr>
-				</form>
-			</div>
+							else {
+														
+								if ($currentRack == $urlSelectRack ) { ?>
+									<option value="<?php echo $currentRack ?>" selected><?php echo $currentRack ?></option>
+							<?php
+								}
+								else { 
+							?>
+								<option value="<?php echo $currentRack ?>"><?php echo $currentRack ?></option>
+							<?php }
+							
+							}
+						}//end foreach ?> 
+						
+					</select>
+					<script type="text/javascript">
+			
+						$('#stationSelect').change(
+							function() {
+								$.post("./php/map/getracks.php", {}, function(data){
+									data = $.parseJSON(data);
+									for(var rack in data) {
+										var rackData = data[rack];
+										console.log(data);
+										if ($('#stationSelect').val() == rackData['rackid']) {
+											$('#bikesAvail').html(rackData['numbikes']);
+											$('#openSlots').html(rackData['emptyslots']);
+										}
+									}
+								});
+							}
+						);
+					</script>
+				</div>
+				<div class="input-group">
+					<input type="text" class="form-control" value="Bikes available:" disabled />
+					<span class="input-group-addon" id="bikesAvail"></span>
+				</div>
+				<div class="input-group">
+					<input type="text" class="form-control" value="Open slots:" disabled />
+					<span class="input-group-addon" id="openSlots"></span>
+				</div>
+				<tr>			
+					<td colspan="2"><input type="submit" class="btn btn-success submitClass" name="action" value="Rent"></td>
+				</tr>
+				<tr>
+					<td colspan="2"><input type="submit" class="btn btn-success submitClass" name="action" value="Return"></td>
+				</tr>
+			</form>
 		</div>
 	</div>
 </html>
