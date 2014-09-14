@@ -19,7 +19,7 @@
 		echo $checkIn."<br />".$checkOut;
 		
 		
-		$difference = $lastRented[0]->diff($checkIn);
+		$difference = $checkOut->diff($checkIn);
 		
 		echo "<br />".$difference;
 		
