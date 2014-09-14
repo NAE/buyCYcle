@@ -60,7 +60,7 @@ $qry = null;
 					}
 					else { 
 					?>
-						<option value="<?php echo $currentRack ?>" <?php echo $selectOption ?> ><?php echo $currentRack ?></option>
+						<option value="<?php echo $currentRack ?>"><?php echo $currentRack ?></option>
 					<?php
 					}
 					
