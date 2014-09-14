@@ -17,7 +17,7 @@
 			<tr>
 				<?php
 				for($i = 1; $i <= 10; $i++) {
-					echo "<td><div class='numbers'><center>".$i."</center></div></td>";
+					echo "<td><center><div class='numbers'>".$i."</div></center></td>";
 				}
 				?>
 			</tr>
