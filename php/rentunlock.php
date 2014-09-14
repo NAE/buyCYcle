@@ -6,7 +6,8 @@
 		$update = null;
 		
 		//Update user's timestamp
-		$update = $db->prepare("UPDATE `Users` SET `lastrented`=NOW() WHERE `userid`='846881035';");
+		$now = time();
+		$update = $db->prepare("UPDATE `Users` SET `lastrented`='".$now."' WHERE `userid`='846881035';");
 		$update->execute();
 		$update = null;
 		
