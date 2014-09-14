@@ -19,9 +19,9 @@
 		echo $checkIn."<br />".$checkOut;
 		
 		
-		$difference = date_diff($checkIn, $checkOut);
+		echo date_diff($checkIn, $checkOut);
 		
-		echo "<br />".$difference;
+
 		
 		
 		// $echo $difference;
