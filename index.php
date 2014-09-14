@@ -107,8 +107,8 @@ $qry = null;
 					</div>
 					<br>
 					<div class="form-actions">			
-						<input type="submit" class="btn btn-success submitClass" name="action" value="Rent">
-						<input type="submit" class="btn btn-success submitClass" name="action" value="Return">
+						<input type="submit" class="btn btn-success" name="action" value="Rent">
+						<input type="submit" class="btn btn-success" name="action" value="Return">
 					</div>
 				</form>
 			</div>
