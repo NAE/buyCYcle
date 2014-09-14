@@ -13,10 +13,11 @@
 		
 		
 		$checkIn = date("Y-m-d H:i:s");
+		
 		echo $checkIn;
 		
 		
-		// $difference = $checkIn->diff($checkOut);
+		$difference = $checkIn->diff($lastRented);
 		// $echo $difference;
 		// $charge = $difference * -.25;
 		// $balance = $charge + $current['curbalance'];
