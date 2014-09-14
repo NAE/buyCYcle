@@ -61,8 +61,10 @@ background-color: #B52E2B;
 	opacity: .75;
 }
 .shadow {
-	width: 100px; 
+	width: 1300px; 
 	height: 75px;
 	border-radius: 5px;
 	background-color: #f5f5f5;
+	border-radius-top-right: 5px;
+	border-radius-top-left: 5px;
 }

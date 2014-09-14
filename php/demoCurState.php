@@ -13,9 +13,8 @@
 
 <body>
 		<center><div class="shadow"><h1 style="color:black; line-height: 75px;"><center>12B</center></h1></div></center>
-		<div style='margin-top: 30px;'></div>
 		<center>
-		<div style='background-color: white; width: 1300px; height: 425px; padding-top: 25px; border-radius: 5px;'>
+		<div style='background-color: white; width: 1300px; height: 425px; padding-top: 25px; border-radius-bottom-left: 5px; border-radius-bottom-right: 5px;'>
 		<center>
 		<table style="box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, .35);">
 			<tr id="numrow">
