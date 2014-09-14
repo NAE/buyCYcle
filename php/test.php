@@ -13,14 +13,15 @@
 		
 		
 		$checkIn = date("Y-m-d H:i:s");
-		$checkOut = date("Y-m-d H:i:s", $lastRented[0]);
+		$phpdate = strtotime($lastRented[0]);
+		$checkOut = date("Y-m-d H:i:s", $phpdate);
 		
 		echo $checkIn."<br />".$checkOut;
 		
 		
 		$difference = $lastRented[0]->diff($checkIn);
 		
-		echo "<br />".$difference;
+		//echo "<br />".$difference;
 		
 		
 		// $echo $difference;
