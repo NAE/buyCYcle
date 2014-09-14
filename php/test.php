@@ -14,7 +14,7 @@
 		
 		$checkIn = date("Y-m-d H:i:s");
 		
-		echo $checkIn."<br />".$lastRented;
+		echo $checkIn."<br />".$lastRented[0];
 		
 		
 		$difference = $checkIn->diff($lastRented);
