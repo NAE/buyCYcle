@@ -91,18 +91,21 @@ $qry = null;
 							</script>
 						</div>
 					</div>
+					<br>
 					<div class="control-group">
 						<div class="input-group">
 							<input type="text" class="form-control" value="Bikes available:" disabled />
 							<span class="input-group-addon label-success countlabel" id="bikesAvail"></span>
 						</div>
 					</div>
+					<br>
 					<div class="control-group">
 						<div class="input-group">
 							<input type="text" class="form-control" value="Open slots:" disabled />
 							<span class="input-group-addon label-success countlabel" id="openSlots"></span>
 						</div>
 					</div>
+					<br>
 					<div class="form-actions">			
 						<input type="submit" class="btn btn-success submitClass" name="action" value="Rent">
 						<input type="submit" class="btn btn-success submitClass" name="action" value="Return">
