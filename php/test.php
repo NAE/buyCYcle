@@ -13,7 +13,7 @@
 		
 		
 		$checkIn = new DateTime;
-		echo $checkIn;
+		//echo $checkIn;
 		
 		//$phpdate = strtotime($lastRented[0]);
 	//	$checkOut = date("Y-m-d H:i:s", $phpdate);
