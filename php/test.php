@@ -12,8 +12,8 @@
 		$initialBalance = $balanceQry->fetch(PDO::FETCH_BOTH);
 		
 		
-	//	$checkIn = date("Y-m-d H:i:s");
-	//	$echo $checkIn;
+		$checkIn = date("Y-m-d H:i:s");
+		$echo $checkIn;
 		
 		
 		// $difference = $checkIn->diff($checkOut);
