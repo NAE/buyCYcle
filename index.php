@@ -112,12 +112,7 @@ $qry = null;
 							<div class="form-actions" id="centersubmits">
 								<input type="submit" class="btn btn-success" name="action" value="Rent">
 								<input type="submit" class="btn btn-primary" name="action" value="Return">
-							</div>
-							<div class="input-group">
-								<span class="input-group-btn">
-									<button class="btn btn-success" type="button">Map</button>
-								</span>
-								<span class="vglyphicon glyphicon-picture"></span>
+								<button type="button" class="btn btn-info">Map</button>
 							</div>
 						</fieldset>
 					</form>
