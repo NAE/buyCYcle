@@ -8,7 +8,7 @@
 		$rental = null;
 		
 		
-		// $checkIn = new DateTime();
+		/$checkIn = new DateTime();
 		// $checkOut = new DateTime($current['lastrented']);
 		// $difference = $checkIn->diff($checkOut);
 		// $echo $difference;
