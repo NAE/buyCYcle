@@ -124,11 +124,15 @@ $qry = null;
 			</div>
 		</div>
 		<div class="well">
-			<div class="form-actions">
-			  <center>
-				<a class="btn btn-info btn-block" href="php/map.php">Map</a>
-				<a class="btn btn-info btn-block" href="php/demoCurState.php">Bike Rack</a>
-		      </center>
+			<div class="row">
+				<div class="span12">
+					<div class="form-actions">
+			  		<center>
+						<a class="btn btn-info btn-block" href="php/map.php">Map</a>
+						<a class="btn btn-info btn-block" href="php/demoCurState.php">Bike Rack</a>
+		      		</center>
+		      	    </div>
+		      	</div>
 			</div>
 		</div>
 	</div>
