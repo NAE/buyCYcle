@@ -19,7 +19,7 @@
 		echo $checkIn."<br />".$checkOut;
 		
 		
-		$difference = $checkOut->diff($checkIn);
+		$difference = date_diff($checkIn, $checkOut);
 		
 		echo "<br />".$difference;
 		
