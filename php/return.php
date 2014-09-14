@@ -5,7 +5,7 @@
 	$qry->execute();
 	$currentSlot = $qry->fetch(PDO::FETCH_BOTH);
 	$qry = null;
-	
+	echo "<div style='height: 80px;'></div>";
 	if($currentSlot) {
 		echo "<br /><center>Please return your bike to stall #".$currentSlot[0].".</center>";
 		include('./returnunlock.php');
@@ -92,9 +92,7 @@ Require_Once(DB SELECT PHP);
 
 </head>
 <body>
-	
-	<center><span id="bikelabel" class="label label-danger">Please return bike!</span></center>
-	
+	<br><center><span id="bikelabel" class="label label-danger">Please return bike!</span></center>
 </body>
 
 </html>
