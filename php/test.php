@@ -4,14 +4,14 @@
 		//Calculate rental time
 		$rental = $db->prepare("SELECT `lastrented`, `curbalance` FROM `Users` WHERE `userid`='846881035' LIMIT 1;");
 		$rental->execute();
-		$current = $rental->fetch(PDO::FETCH_BOTH);
+		$current = $rental->fetchAll(PDO::FETCH_BOTH);
 		$rental = null;
 		
 		
 		$checkIn = date("Y-m-d H:i:s");
 		$echo $checkIn;
 		
-		foreach($current as $pkey=>$value) {
+		foreach($current as $pkey => $value) {
 			$checkOut = $current[$pkey]['lastrented'];
 		}
 		// $difference = $checkIn->diff($checkOut);
