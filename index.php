@@ -54,12 +54,14 @@ $qry = null;
 					
 					echo $currentRack;
 					if($urlSelectRack) {
-						if ($currentRack == $urlSelectRack ) {
-							$selectOption = "selected";
-						}
+						if ($currentRack == $urlSelectRack ) { ?>
+						<option value="<?php echo $currentRack ?>" selected ><?php echo $currentRack ?></option>
+					<?php	}
 					}
 					else { 
-						$selectOption = "";
+					?>
+						<option value="<?php echo $currentRack ?>" <?php echo $selectOption ?> ><?php echo $currentRack ?></option>
+					<?php
 					}
 					
 					?>
