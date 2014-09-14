@@ -93,7 +93,7 @@ Require_Once(DB SELECT PHP);
 </head>
 <body>
 	
-	<span id="bikelabel" class="label label-danger">Please return bike!</span>
+	<center><span id="bikelabel" class="label label-danger">Please return bike!</span></center>
 	
 </body>
 
