@@ -55,5 +55,8 @@ background-color: #B52E2B;
 
 .bike {
 	cursor: pointer;
+}
+
+.bike:hover {
 	opacity: .75;
 }
