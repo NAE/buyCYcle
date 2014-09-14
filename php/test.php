@@ -21,7 +21,7 @@
 		
 		$difference = $lastRented[0]->diff($checkIn);
 		
-		//echo "<br />".$difference;
+		echo "<br />".$difference;
 		
 		
 		// $echo $difference;
