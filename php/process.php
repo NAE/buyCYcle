@@ -16,7 +16,7 @@
 		
 	if (isset($_POST['station_ID'])) {
 		$currentRack = $_POST['station_ID'];
-		echo "<br/><center><div style='font-size: 20px;'>".$currentRack."</div></center>";
+		echo "<br/><center><div style='font-size: 30px;'>".$currentRack."</div></center>";
 		
 		}	
 	elseif (isset($_GET['station_ID'])) {

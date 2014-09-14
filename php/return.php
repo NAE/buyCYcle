@@ -6,12 +6,12 @@
 	$currentSlot = $qry->fetch(PDO::FETCH_BOTH);
 	$qry = null;
 	if($currentSlot) {
-		echo "<center>Please return your bike to stall #".$currentSlot[0].".</center>";
+		echo "<center><div style='font-size: 24px;'>Please return your bike to stall #".$currentSlot[0].".</div></center>";
 		include('./returnunlock.php');
 		
 	}
 	else {
-		echo "<br /><center>There are no empty slots available.</center>";
+		echo "<br /><center><div style='font-size: 24px;'>There are no empty slots available.</div></center>";
 	}
 	
 /**
