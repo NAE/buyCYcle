@@ -41,12 +41,10 @@ $qry = null;
 				</script>
 </head>
 	<div class="well container">
-		<form id="bikeCheck" action="php/process.php" method="post">
-
-			<table id="rackTable">
-			<tr> <td>Station ID: </td>
-				<td>
-				<select name="station_ID" size="1" id="stationSelect">
+		<form id="bikeCheck" action="php/process.php" method="post" role="form">
+			<div class="form-group">
+				<label for="station_ID">Station ID:</label>
+				<select class="form-control" name="station_ID" id="station_ID" size="1" id="stationSelect">
 				
 					<?php foreach($allRacks as $pkey => $racks) {  
 						$currentRack = $allRacks[$pkey]['rackid'];
@@ -88,14 +86,15 @@ $qry = null;
 						}
 					);
 				</script>
-				</td>
-			</tr>
-			<tr>
-				<td>Bikes available:</td> <td id="bikesAvail"></td>
-			</tr>
-			<tr>
-				<td>Open slots:</td> <td id="openSlots"></td>
-			</tr>
+			</div>
+			<div class="input-group">
+				<input type="text" class="form-control" value="Bikes available:" disabled />
+				<span class="input-group-addon" id="bikesAvail"></span>
+			</div>
+			<div class="input-group">
+				<input type="text" class="form-control" value="Open slots:" disabled />
+				<span class="input-group-addon" id="openSlots"></span>
+			</div>
 			<tr>			
 				<td colspan="2"><input type="submit" class="btn btn-success submitClass" name="action" value="Rent"></td>
 			</tr>
