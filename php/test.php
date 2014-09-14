@@ -2,7 +2,7 @@
 	require_once('./db_connect.php');
 		
 		//Calculate rental time
-		$rental = $db->prepare("SELECT `lastrented`, `curbalance` FROM `Users` WHERE `userid`='846881035' LIMIT 1;");
+		$rental = $db->prepare("SELECT * FROM `Users` WHERE `userid`='846881035' LIMIT 1;");
 		$rental->execute();
 		$current = $rental->fetchAll(PDO::FETCH_BOTH);
 		$rental = null;
