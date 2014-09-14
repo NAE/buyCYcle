@@ -114,8 +114,8 @@ $qry = null;
 							<br>
 							<div class="form-actions" id="centersubmits">
 							  <center>
-								<input type="submit" class="btn btn-success" name="action" value="Rent">
-								<input type="submit" class="btn btn-primary" name="action" value="Return">
+								<input type="submit" class="btn btn-success btn-block" name="action" value="Rent">
+								<input type="submit" class="btn btn-primary btn-block" name="action" value="Return">
 							  </center>
 							</div>
 						</fieldset>
@@ -126,8 +126,8 @@ $qry = null;
 		<div class="well">
 			<div class="form-actions">
 			  <center>
-				<a style="text-align: right;" class="btn btn-info" href="php/map.php">Map</a>
-				<a style="text-align: right;" class="btn btn-info" href="php/demoCurState.php">Bike Rack</a>
+				<a style="text-align: right;" class="btn btn-info btn-block" href="php/map.php">Map</a>
+				<a style="text-align: right;" class="btn btn-info btn-block" href="php/demoCurState.php">Bike Rack</a>
 		      </center>
 			</div>
 		</div>
