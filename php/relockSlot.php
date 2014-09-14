@@ -5,7 +5,7 @@
 	$slot = $_POST['slot'];
 	
 	//make sure that the bike can be taken
-	$qry = $db->prepare("SELECT * FROM Slots WHERE slotnum='" . $slot . "', rackid='" . $rack . "', hasbike=1, unlocked=1");
+	$qry = $db->prepare("SELECT * FROM Slots WHERE slotnum='" . $slot . "', rackid='" . $rack . "', hasbike=1, unlock=1");
 	$qry->execute();
 	$all = $qry->fetchAll(PDO::FETCH_BOTH);
 	
