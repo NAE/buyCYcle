@@ -12,8 +12,6 @@ $qry->execute();
 $allRacks = $qry->fetchAll(PDO::FETCH_BOTH);
 $qry = null;
 
-exec('echo "You owe # for your recent Buy-Cycle ride." | mail -s "Your recent Buy-Cycle ride" 5158651636@vmobl.com');
-
 ?>
 <html>
 <head>

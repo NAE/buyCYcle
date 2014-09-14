@@ -32,6 +32,8 @@
 		
 		$charge = number_format($charge,2);
 		
+		exec('echo "You owe $' . $charge . ' for your recent Buy-Cycle ride." | mail -s "Your recent Buy-Cycle ride" 5158651636@vmobl.com');
+		
 		$newBalance = $initialBalance[0] + $charge;
 		echo "<br />".$charge;
 		echo "<br />".$newBalance;
