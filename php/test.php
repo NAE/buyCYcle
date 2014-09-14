@@ -13,7 +13,7 @@
 		
 		
 		$checkIn = date("Y-m-d H:i:s");
-		$echo $checkIn;
+		echo $checkIn;
 		
 		
 		// $difference = $checkIn->diff($checkOut);
