@@ -4,8 +4,8 @@
 </head>
 <body>
 <div style="height: 25px;"></div>
-<div style="background-color: rgba(0,0,0,0.5); width: 600px; height: 600px; line-height: 600px;">
 <center>
+<div style="background-color: rgba(0,0,0,0.5); width: 600px; height: 600px;">
 <table cellspacing="40">
 	<tr>
 		<td>
@@ -24,7 +24,7 @@
 		</td>
 	</tr>
 </table>
-</center>
 </div>
+</center>
 </body>
 </html>
