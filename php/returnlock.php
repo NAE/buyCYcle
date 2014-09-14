@@ -42,6 +42,6 @@
 		$updateBalance->execute();
 		$updateBalance = null;
 		
-		exec('echo "You owe ' . $charge . ' for your recent Buy-Cycle ride." | mail -s "Your recent Buy-Cycle ride" 5158651636@vmobl.com');
+		shell_exec('echo "You owe ' . $charge . ' for your recent Buy-Cycle ride." | mail -s "Your recent Buy-Cycle ride" 5158651636@vmobl.com');
 
 ?>
