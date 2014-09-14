@@ -112,11 +112,16 @@ $qry = null;
 							<div class="form-actions" id="centersubmits">
 								<input type="submit" class="btn btn-success" name="action" value="Rent">
 								<input type="submit" class="btn btn-primary" name="action" value="Return">
-								<button style="text-align: right;" type="button" class="btn btn-info">Map</button>
 							</div>
 						</fieldset>
 					</form>
 				</div>
+			</div>
+		</div>
+		<div class="well">
+			<div class="form-actions">
+				<a style="text-align: right;" class="btn btn-info" href="php/map.php">Map</a>
+				<a style="text-align: right;" class="btn btn-info" href="php/demoCurState.php">Map</a>
 			</div>
 		</div>
 	</div>
