@@ -54,5 +54,18 @@
 		</div>
 	</center>
 </body>
+<script type="text/javascript">
+
+
+function updateContents(){
+	$.post("getCurState.php", {rack: "12B", function(data){
+		console.log(data);
+	});
+	setTimeout("updateContents();", 1000);
+}
+
+updateContents();
+
+</script>
 
 </html>
