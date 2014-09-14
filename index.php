@@ -40,7 +40,7 @@ $qry = null;
 					);
 				</script>
 </head>
-	<div class="well container">
+	<div class="squarebox container">
 		<div class="well shadowed">
 			<div class="row">
 				<div class="span12">

@@ -40,6 +40,10 @@ background-color: red;
 	font-weight: bold;
 }
 
+.squarebox {
+	background: white;
+}
+
 .shadowed {
 	box-shadow: 0em 0em .7em black;
 }
