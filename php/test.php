@@ -17,6 +17,9 @@
 		$checkOut = $lastRented[0];
 		echo "<br />".$checkOut;
 		
+		$difference = $checkIn - $checkOut;
+		echo "<br />".$difference;
+		
 		//$phpdate = strtotime($lastRented[0]);
 	//	$checkOut = date("Y-m-d H:i:s", $phpdate);
 		
