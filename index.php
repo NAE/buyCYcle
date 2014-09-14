@@ -111,7 +111,7 @@ $qry = null;
 							<br>
 							<div class="form-actions" id="centersubmits">		
 								<input type="submit" class="btn btn-success" name="action" value="Rent">
-								<input type="submit" class="btn btn-success" name="action" value="Return">
+								<input type="submit" class="btn btn-primary" name="action" value="Return">
 							</div>
 						</fieldset>
 					</form>
