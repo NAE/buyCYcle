@@ -51,9 +51,9 @@ function updateContents(){
 			
 			var bikeTdString;
 			if(hasBike == "1"){
-				bikeTdString = "<td><img class='imgSize' src='../Graphics/greenBike.png?test=1'></td>";
+				bikeTdString = "<td><img class='imgSize bike' data-slot='" + slotNum + "' data-rack='" + rackId + "' src='../Graphics/greenBike.png?test=1'></td>";
 			}else{
-				bikeTdString = "<td><img class='imgSize' src='../Graphics/redBike.png?test=1'></td>";
+				bikeTdString = "<td><img class='imgSize bike' data-slot='" + slotNum + "' data-rack='" + rackId + "' src='../Graphics/redBike.png?test=1'></td>";
 			}
 			$(bikeTdString).appendTo("#bikerow");
 			
@@ -67,6 +67,16 @@ function updateContents(){
 		}
 	});
 	setTimeout("updateContents();", 1000);
+}
+
+$(".bike").click(function(){
+	takeBike($(this).attr("data-rack"), $(this).attr("data-slot"));
+});
+
+function takeBike(rack, slot){
+	$.post("relockSlot.php", {rack: rack, slot: slot}, function(data){
+		console.log(data);
+	});
 }
 
 updateContents();
