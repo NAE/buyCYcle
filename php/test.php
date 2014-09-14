@@ -9,7 +9,9 @@
 		
 		
 		$checkIn = date("Y-m-d H:i:s");
-		// $checkOut = new DateTime($current['lastrented']);
+		$echo $checkIn;
+		
+		$checkOut = $current['lastrented'];
 		// $difference = $checkIn->diff($checkOut);
 		// $echo $difference;
 		// $charge = $difference * -.25;
