@@ -55,7 +55,7 @@ $qry = null;
 					echo $currentRack;
 					if($urlSelectRack) {
 						if ($currentRack == $urlSelectRack ) {
-							$selectOption = "selected='" . $currentRack . "' ";
+							$selectOption = "selected=\"" . $currentRack . "\"";
 						}
 					}
 					else { 
