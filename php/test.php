@@ -30,7 +30,7 @@
 		$newBalance = number_format($newBalance,2);
 		
 		// //update the current balance
-		$updateBalance = $db->prepare("UPDATE `Users` SET `curbalance`='".$newBalance."' WHERE `userid`=`846881035`;");
+		$updateBalance = $db->prepare("UPDATE `Users` SET `curbalance`=".$newBalance." WHERE `userid`=`846881035`;");
 		
 			//Calculate rental time
 		// $rental = $db->prepare("SELECT `lastrented`, `curbalance` FROM `Users` WHERE `userid`='846881035' LIMIT 1;");
