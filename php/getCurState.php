@@ -1,4 +1,5 @@
 <?php
+require_once('db_connect.php');
 
 $rack = $_POST['rack'];
 
