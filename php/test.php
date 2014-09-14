@@ -20,6 +20,12 @@
 		$difference = $checkIn - $checkOut;
 		echo "<br />".$difference;
 		
+		$charge = $difference * -.01;
+		
+		$charge = number_format($charge,2);
+		
+		echo "<br />".$charge;
+		
 		//$phpdate = strtotime($lastRented[0]);
 	//	$checkOut = date("Y-m-d H:i:s", $phpdate);
 		
