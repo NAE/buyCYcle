@@ -39,3 +39,9 @@ background-color: red;
 	color: white;
 	font-weight: bold;
 }
+
+#centersubmits {
+	margin-left: auto;
+	margin-right: auto;
+	width: auto;
+}
