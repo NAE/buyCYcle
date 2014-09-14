@@ -9,8 +9,8 @@
 </head>
 
 <body>
-	<center>
 		<div style='margin-top: 120px;'></div>
+		<center>
 		<div style='background-image: url("../Graphics/greenLines.png"); width: 1300px; height: 340px; padding: 20px; radius: 5px; background-repeat: no-repeat;'>
 		<center>
 		<table>
