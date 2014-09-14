@@ -18,6 +18,8 @@
 		
 		
 		$difference = $checkIn->diff($lastRented);
+		
+		echo "<br />".$difference;
 		// $echo $difference;
 		// $charge = $difference * -.25;
 		// $balance = $charge + $current['curbalance'];
