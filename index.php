@@ -45,6 +45,7 @@ $qry = null;
 			<div class="span12">
 				<form class="form-horizontal span6" id="bikeCheck" action="php/process.php" method="post" role="form">
 					<fieldset>
+						<legend>Rent or Return Bike</legend>
 						<div class="control-group">
 							<div class="input-group">
 								<label class="input-group-addon" for="stationSelect">Station ID:</label>
