@@ -1,7 +1,9 @@
 <html>
 <head>
+	<link rel="stylesheet" type="text/css" href="../css/main.css">
 </head>
 <body>
+<center>
 <table cellspacing="20">
 	<tr>
 		<td>
@@ -20,5 +22,6 @@
 		</td>
 	</tr>
 </table>
+</center>
 </body>
 </html>
