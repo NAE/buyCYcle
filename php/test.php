@@ -10,7 +10,7 @@
 		$balanceQry = $db->prepare("SELECT `curbalance` FROM `Users` WHERE `userid`='846881035';");
 		$balanceQry->execute();
 		$initialBalance = $balanceQry->fetch(PDO::FETCH_BOTH);
-		
+		$balanceQry = null;
 		
 		$checkIn = time();
 		echo $checkIn;
@@ -24,22 +24,9 @@
 		
 		$charge = number_format($charge,2);
 		
-		echo "<br />".$charge;
+		$newBalance = $initialBalance[0] + $charge;
+		echo "<br />".$newBalance;
 		
-		//$phpdate = strtotime($lastRented[0]);
-	//	$checkOut = date("Y-m-d H:i:s", $phpdate);
-		
-	//	 echo $checkIn."<br />".$checkOut;
-		
-		
-
-		
-
-		
-		
-		// $echo $difference;
-		// $charge = $difference * -.25;
-		// $balance = $charge + $current['curbalance'];
 		
 		// //update the current balance
 		// $updateBalance = $db->prepare("UPDATE `Users` SET `curbalance`='".$balance."' WHERE `userid`=`846881035`;");
