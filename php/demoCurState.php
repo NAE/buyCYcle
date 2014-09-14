@@ -12,7 +12,7 @@
 </head>
 
 <body>
-		<center><div class="shadow"><h1 style="color:black; line-height: 75px;"><center>12B</center></h1></div></center>
+		<center><div class="shadow"><h1 style="color:black; line-height: 75px;"><center id="racklabel">12B</center></h1></div></center>
 		<center>
 		<div style='background-color: white; width: 1300px; height: 425px; padding-top: 25px; border-radius-bottom-left: 5px; border-radius-bottom-right: 5px;'>
 		<center>
@@ -41,6 +41,7 @@ var rack = "12B";
 
 	if (isset($_GET['rack'])){
 		echo "'rack = " . $_GET['rack'] . "';";
+		echo "$('#racklabel').html(rack);";
 	}
 
 ?>
