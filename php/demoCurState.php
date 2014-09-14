@@ -17,7 +17,7 @@
 		<center>
 		<div style='background-image: url("../Graphics/greenLines.png"); width: 1300px; height: 340px; padding-top: 20px; radius: 5px; background-repeat: no-repeat;'>
 		<center>
-		<table class="shadowed">
+		<table class="well">
 			<tr id="numrow">
 				<?php
 					for($i = 1; $i <= 10; $i++) {
