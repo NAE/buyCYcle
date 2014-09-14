@@ -25,6 +25,7 @@
 		$charge = number_format($charge,2);
 		
 		$newBalance = $initialBalance[0] + $charge;
+		echo "<br />".$charge;
 		echo "<br />".$newBalance;
 		
 		
