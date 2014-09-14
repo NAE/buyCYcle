@@ -21,7 +21,7 @@
 			<tr id="numrow">
 				<?php
 					for($i = 1; $i <= 10; $i++) {
-						echo "<td><center><div class='numbers imgSize' style='font-size: 30px;'>".$i."</div></center></td>";
+						echo "<td><center><div class='numbers imgSize' style='font-size: 35px;'>".$i."</div></center></td>";
 					}
 				?>
 			</tr>
