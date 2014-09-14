@@ -14,7 +14,7 @@
 		return;
 	}
 	
-	$qry = $db->prepare("UPDATE `Slots` SET `hasbike`=1 WHERE `rackid`='" . $rack . "' AND `slotnum`='" . $slot . "';");
+	$qry = $db->prepare("UPDATE `Slots` SET `hasbike`=1, `unlock`=0 WHERE `rackid`='" . $rack . "' AND `slotnum`='" . $slot . "';");
 	$qry->execute();
 
 ?>
