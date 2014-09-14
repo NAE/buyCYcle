@@ -41,6 +41,7 @@ $qry = null;
 					);
 				</script>
 </head>
+	<div class="well">
 		<form id="bikeCheck" action="php/process.php" method="post">
 
 			<table id="rackTable">
@@ -103,4 +104,5 @@ $qry = null;
 				<td colspan="2"><input type="submit" class="submitClass" name="action" value="Return"></td>
 			</tr>
 		</form>
+	</div>
 </html>
