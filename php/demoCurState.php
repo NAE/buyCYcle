@@ -12,8 +12,7 @@
 </head>
 
 <body>
-		<h3>12B</h3>
-		<br>
+		<h1>12B</h3>
 		<div style='margin-top: 50px;'></div>
 		<center>
 		<div style='background-color: white; width: 1300px; height: 425px; padding-top: 25px; border-radius: 5px;'>
