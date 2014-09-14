@@ -57,7 +57,7 @@ $qry = null;
 						if ($currentRack == $urlSelectRack ) { ?>
 						<option value="<?php echo $currentRack ?>" selected ><?php echo $currentRack ?></option>
 						
-					<?php	echo "Test";
+					<?php	echo "Test test";
 						}
 					}
 					else { 
