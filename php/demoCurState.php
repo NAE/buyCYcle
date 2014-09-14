@@ -64,13 +64,13 @@ function updateContents(){
 			}
 			$(lockTdString).appendTo("#lockrow");
 		}
+		
+		$(".bike").click(function(){
+			takeBike($(this).attr("data-rack"), $(this).attr("data-slot"));
+		});
 	});
 	setTimeout("updateContents();", 1000);
 }
-
-$(".bike").click(function(){
-	takeBike($(this).attr("data-rack"), $(this).attr("data-slot"));
-});
 
 function takeBike(rack, slot){
 	$.post("relockSlot.php", {rack: rack, slot: slot}, function(data){
