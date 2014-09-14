@@ -11,7 +11,7 @@
 <body>
 	<center>
 		<div style='margin-top: 120px;'></div>
-		<div style='background-image: url("../Graphics/greenLines.jpg"); width: 1220px; height: 300px;'>
+		<div style='background-image: url("../Graphics/greenLines.jpg"); width: 1300px; height: 340px; padding: 20px;'>
 		<table>
 			<tr>
 				<?php
