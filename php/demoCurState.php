@@ -15,9 +15,9 @@
 		<div style='margin-top: 50px;'></div>
 		<center><h3 style="color: white;">Abstraction of Rack with Bikes & Locks</h3></center>
 		<center>
-		<div style='background-color: white; width: 1300px; height: 420px; padding-top: 20px; border-radius: 5px;'>
+		<div style='background-color: white; width: 1300px; height: 425px; padding-top: 25px; border-radius: 5px;'>
 		<center>
-		<table style="box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, .50);">
+		<table style="box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, .35);">
 			<tr id="numrow">
 				<?php
 					for($i = 1; $i <= 10; $i++) {
