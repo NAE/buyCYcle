@@ -35,7 +35,6 @@
 </body>
 <script type="text/javascript">
 
-
 function updateContents(){
 	$.post("getCurState.php", {rack: "12B"}, function(data){
 		data = $.parseJSON(data);
