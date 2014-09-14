@@ -2,7 +2,7 @@
 <?php
 	require_once('./db_connect.php');
 	echo "<div style='height: 80px;'></div>";
-	echo "div style='width: 400px; height: 400px; background-color: black;'>"
+	echo "div style='width: 600px; height: 600px; background-color: black;'>"
 	if (isset($_POST['action'])) {
 		$action = strtolower($_POST['action']);
 		
