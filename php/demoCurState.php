@@ -17,12 +17,14 @@
 		<div style='background-image: url("../Graphics/greenLines.png"); width: 1300px; height: 340px; padding-top: 20px; radius: 5px; background-repeat: no-repeat;'>
 		<center>
 		<table>
-			<tr>
+			<tr id="bikerow">
 				<?php
 				for($i = 1; $i <= 10; $i++) {
 					echo "<td><center><div class='numbers' style='font-size: 24px;'>".$i."</div></center></td>";
 				}
 				?>
+			</tr>
+			<tr id="lockrow">
 			</tr>
 				<?php
 					$qry = $db->prepare("SELECT * FROM Slots WHERE rackid='12B'");
@@ -62,7 +64,16 @@
 
 function updateContents(){
 	$.post("getCurState.php", {rack: "12B"}, function(data){
+		data = $.parseJSON(data);
 		console.log(data);
+		for(var slot in data){
+			var slotNum = slot['slotnum'];
+			var rackId = slot['rackid'];
+			var hasBike = slot['hasbike'];
+			var unlock = slot['unlock'];
+			
+			$("<td><center><div class='numbers' style='font-size: 24px;'>" + slotNum + "</div></center></td>").appendTo("#bikeRow");
+		}
 	});
 	setTimeout("updateContents();", 1000);
 }
