@@ -5,7 +5,7 @@
 <body>
 <div style="height: 25px;"></div>
 <center>
-<div style="background-color: rgba(0,0,0,0.5); width: 600px; height: 600px;">
+<div style="background-color: rgba(0,0,0,0.5); width: 620px; height: 620px; border-radius: 5px;">
 <table cellspacing="40">
 	<tr>
 		<td>
