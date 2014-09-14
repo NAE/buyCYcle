@@ -24,24 +24,9 @@
 				}
 				?>
 			</tr>
-				<?php
-					$qry = $db->prepare("SELECT * FROM Slots WHERE rackid='12B'");
-					$qry->execute();
-					$all = $qry->fetchAll(PDO::FETCH_BOTH);
-					$qry = null;
-			echo "<tr id='bikerow'>";
-			echo "</tr>
-			<tr id='lockopen'>";
-					foreach($all as $pkey) {
-						$cur = $pkey['unlock'];
-						if($cur == 1) {
-							echo "<td><img class='imgSize' src='../Graphics/lockOpen.png'></td>";
-						}
-						else {
-							echo "<td><img class='imgSize' src='../Graphics/lockClosed.png'></td>";
-						}
-					}
-				?>
+			<tr id='bikerow'>
+			</tr>
+			<tr id='lockrow'>
 			</tr>
 		</table>
 		</center>
@@ -64,14 +49,21 @@ function updateContents(){
 			var hasBike = bikeData['hasbike'];
 			var unlock = bikeData['unlock'];
 			
-			var tdString;
+			var bikeTdString;
 			if(hasBike == "1"){
-				tdString = "<td><img class='imgSize' src='../Graphics/greenBike.png'></td>";
+				bikeTdString = "<td><img class='imgSize' src='../Graphics/greenBike.png'></td>";
 			}else{
-				tdString = "<td><img class='imgSize' src='../Graphics/redBike.png'></td>";
+				bikeTdString = "<td><img class='imgSize' src='../Graphics/redBike.png'></td>";
 			}
+			$(bikeTdString).appendTo("#bikerow");
 			
-			$(tdString).appendTo("#bikerow");
+			var lockTdString;
+			if(unlock == "1"){
+				lockTdString = "<td><img class='imgSize' src='../Graphics/lockOpen.png'></td>";
+			}else{
+				lockTdString = "<td><img class='imgSize' src='../Graphics/lockClosed.png'></td>";
+			}
+			$(lockTdString).appendTo("#lockrow");
 		}
 	});
 	setTimeout("updateContents();", 1000);
