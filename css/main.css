@@ -77,5 +77,10 @@ background-color: #B52E2B;
 	font-size:50px;
 }
 .thanks a {
-	color:#ACCFCC;
+	color:#accfcc;
+}
+.qrText {
+	color: #f5f5f5;
+	font-size: 34px;
+	margin-right: 30px;
 }
